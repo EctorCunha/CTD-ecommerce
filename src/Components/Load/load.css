@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.preload{
+    background-size: cover;
+    background-position-y: center;
+    background-image: url(../../Assets/preload.gif);
+    width: 100vw;
+    height: 100vh;
+}
+
+/* .logo-preload{
+    position: absolute;
+    animation: neon .5s  infinite ease-in-out;
+}
+
+@keyframes neon {
+    from{
+        filter: drop-shadow(1px 1px 3px #30899d);
+    }
+    to {
+        filter: drop-shadow(3px 3px 6px #8ec7d4);
+    }
+} */
