@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Nico-Moji';
+    src:url('../src/Fonts/Nico-Moji.ttf.woff') format('woff'),
+        url('../src/Fonts/Nico-Moji.ttf.svg#Nico-Moji') format('svg'),
+        url('../src/Fonts/Nico-Moji.ttf.eot'),
+        url('../src/Fonts/Nico-Moji.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nico-Moji';
+}
