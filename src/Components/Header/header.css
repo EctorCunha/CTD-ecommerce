@@ -5,6 +5,7 @@ header {
   position: fixed;
   background-color: transparent;
   width: 100%;
+  font-size: 1.5rem;
 }
 
 header > * {
@@ -24,23 +25,32 @@ header > * {
 .menu-header > nav {
   margin: auto;
 }
+
 .menu-header > nav > ul {
   padding-inline-start: 0;
   display: flex;
 }
+
+.menu-header > nav > ul > span {
+  color: white;
+}
+
 .menu-header > nav > ul > a {
   text-decoration: none;
   color: white;
 }
+
 .menu-header > nav > ul > a > li {
   margin: 0 1rem;
   list-style: none;
 }
+
 .icons-header {
   margin: auto 0;
   align-items: center;
 }
-.icons-header > svg {
+
+.icons-header  svg {
   margin: 0 0.8rem;
   align-items: center;
 }
