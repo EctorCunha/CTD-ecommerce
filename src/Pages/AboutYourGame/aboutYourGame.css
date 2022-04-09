@@ -1,0 +1,66 @@
+.container-about-your-game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    background-image: url(../../Assets/Category/category_background_pink.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.title-about-your-game{
+    font-size: 3.6rem;
+    font-weight: lighter;
+    margin-bottom: 60px;
+}
+
+.game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: 45vh;
+    gap: 2rem;
+}
+
+.game-image img{
+    width: 18vw;
+    height: 45vh;
+    margin-left: -10px;
+    margin-bottom: -5px;
+    border-radius: 10px;
+}
+
+.game-info{
+    background: linear-gradient(90deg, #4F214B, #B6388C);
+    width: 40vw;
+    height: 45vh;
+    margin-right: -5px;
+    border-radius: 10px;
+    border: 2px solid rgb(149, 97, 139);
+    filter: drop-shadow(0 0 4px rgb(231, 226, 231));
+}
+
+.game-info h2{
+    margin-bottom: 40px;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.price > span {
+    font-size: 2.5rem;
+}
+
+.price > button {
+    width: 10vw;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.8rem;
+}

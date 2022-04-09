@@ -1,18 +1,18 @@
-.page {
+.page-error {
   width: 100vw;
   height: 100vh;
-  background-image: url(../../Assets/Home/fundo-Recovered\ 2.svg);
+  background-image: url(../../Assets/Gif/error404.gif);
   background-repeat: no-repeat;
   background-size: cover;
-  color: white;
+  background-position-y: center;
 }
-
+/* 
 .body {
   display: flex;
   justify-content: center;
 }
-
-h1 {
+ */
+/* .error {
   margin: 458px 0 0 112px;
   font-size: 59px;
   font-weight: 400;
@@ -22,4 +22,4 @@ h1 {
   height: 150px;
   color: #ffffff;
   text-shadow: 3px 3px 7px rgba(187, 187, 187, 0.76);
-}
+} */
