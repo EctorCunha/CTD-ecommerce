@@ -1,15 +1,33 @@
 .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   height: 100vh;
-  background-image: url(../../Assets/Home/fundo-Recovered\ 2.svg);
+  background-image: url(../../Assets/Home/home-background-01.png);
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
 }
 
-.body {
+.body-1 {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.logoHome {
+  width: 33vw;
+  margin-top: -9px;
+}
+
+.imgHome{
+  width: 35vw;
+  height: 38vh;
+  border: 4px solid #6ec5cc;
+  filter: drop-shadow(0 0 5px #00998a);
+  border-radius: 10px;
 }
 
 .title-home {
@@ -22,4 +40,8 @@
   height: 150px;
   color: #ffffff;
   text-shadow: 3px 3px 7px rgba(187, 187, 187, 0.76);
+}
+
+.body-2{
+  background-image: url(../../Assets/Home/home-background-02.png);
 }
