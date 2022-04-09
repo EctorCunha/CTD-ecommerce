@@ -10,13 +10,13 @@ export default function Header() {
             <div className='menu-header'>
                 <nav>
                     <ul>
-                        <Link to={'/categories'}><li>CATEGORIAS</li></Link>
+                        <Link to={'/'}><li>HOME</li></Link>
                         <span>|</span>
                         <Link to={'/top10'}><li>TOP 10</li></Link>
                         <span>|</span>
-                        <Link to={'/about'}><li>SOBRE</li></Link>
+                        <Link to={'/categories'}><li>CATEGORIAS</li></Link>
                         <span>|</span>
-                        <Link to={'/aboutyourgame'}><li>SOBRE NÓS</li></Link>
+                        <Link to={'/about'}><li>SOBRE NÓS</li></Link>
                     </ul>
                 </nav>
             </div>
