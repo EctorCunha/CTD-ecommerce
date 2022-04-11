@@ -6,6 +6,7 @@ import About from "./Pages/About";
 import AboutYourGame from "./Pages/AboutYourGame";
 import Adm from "./Pages/Adm";
 import Categories from "./Pages/Categories";
+import Cart from "./Pages/Cart"; 
 import Home from './Pages/Home';
 
 function App() {
@@ -18,10 +19,11 @@ function App() {
           <Route path="/categories" element={<Categories />} />
           <Route path="/aboutyourgame" element={<AboutYourGame/>} />
           <Route path="/about" element={<About />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/adm" element={<Adm />} />
           <Route path="*" element={<Error404 />} />
-          <Route />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );
