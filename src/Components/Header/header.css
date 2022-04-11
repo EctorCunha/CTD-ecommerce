@@ -55,3 +55,7 @@ header > * {
   margin: 0 0.8rem;
   align-items: center;
 }
+
+.icon_cart {
+  margin-right: 1.2rem;
+}

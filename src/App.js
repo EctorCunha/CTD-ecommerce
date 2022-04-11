@@ -5,6 +5,7 @@ import Error404 from "./Pages/Error404";
 import About from "./Pages/About";
 import AboutYourGame from "./Pages/AboutYourGame";
 import Categories from "./Pages/Categories";
+import Cart from "./Pages/Cart"; 
 import Home from './Pages/Home';
 
 function App() {
@@ -17,9 +18,10 @@ function App() {
           <Route path="/categories" element={<Categories />} />
           <Route path="/aboutyourgame" element={<AboutYourGame/>} />
           <Route path="/about" element={<About />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<Error404 />} />
-          <Route />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );
