@@ -1,0 +1,12 @@
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../../Assets/Cart/background_cart.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white; 
+  }
+  
