@@ -9,6 +9,7 @@ import About from "./Pages/About";
 import Cart from "./Pages/Cart";
 import Adm from "./Pages/Adm"; 
 import Error404 from "./Pages/Error404";
+import CartFinish from "./Pages/CartFinish";
 
 function App() {
   return (
@@ -22,10 +23,11 @@ function App() {
           <Route path="/aboutyourgame" element={<AboutYourGame/>} />
           <Route path="/about" element={<About />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/cart/finish" element={<CartFinish />} />
           <Route path="/adm" element={<Adm />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </div>
   );
