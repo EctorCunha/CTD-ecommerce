@@ -1,0 +1,7 @@
+.cart_finish {
+  height: 100vh;
+  background-image: url(../../Assets/Gif/final_purchase2.gif);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: center;
+}
