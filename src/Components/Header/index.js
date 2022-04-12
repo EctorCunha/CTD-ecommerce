@@ -6,17 +6,23 @@ import icon_adm from '../../Assets/Basic/icon-adm.svg'
 
 
 export default function Header() {
+
+
+    function scroll(id){
+        document.getElementById(id).scrollIntoView();
+    }
+
     return (
         <header>
             <Link to={'/'}><div className="logo-header"><img src={logo_header} alt="Logo Game Night Home" /></div></Link>
             <div className='menu-header'>
                 <nav>
                     <ul>
-                        <Link to={'/'}><li>HOME</li></Link>
+                        <Link to={'/'}><li onClick={() => scroll("page-1")}>HOME</li></Link>
                         <span>|</span>
-                        <Link to={'/top10'}><li>TOP 10</li></Link>
+                        <Link to={'/'}><li onClick={() => scroll("top10")}>TOP 10</li></Link>
                         <span>|</span>
-                        <Link to={'/categories'}><li>CATEGORIAS</li></Link>
+                        <Link to={'/'}><li onClick={() => scroll("page-category")}>CATEGORIAS</li></Link>
                         <span>|</span>
                         <Link to={'/about'}><li>SOBRE NÓS</li></Link>
                     </ul>

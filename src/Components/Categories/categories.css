@@ -1,0 +1,77 @@
+.page-category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../../Assets/Home/home-background-02.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container-category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.title-category{
+  font-weight: lighter;
+  font-size: 3rem;
+}
+
+.row-category {
+  margin: auto;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.card-person-category {
+  margin: 5px 5px;
+  padding: 5px 5px;
+  transition: all ease 0.3s;
+}
+
+.img-container-category {
+  height: 25vh;
+  margin: 0px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.img-container-category > img {
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-person-category:hover {
+  transform: scale(1.1);
+}
+
+.card-person-category:hover img {
+  filter: none;
+}
+
+
+@media (max-width: 575px) {
+  .row-category > div {
+    padding: 0;
+    padding-bottom: 8px;
+  }
+  div > img {
+    width: 90vw;
+  }
+  .img-container-category:hover {
+    width: 100vw;
+  }
+  
+}

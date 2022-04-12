@@ -12,7 +12,7 @@ export default function About() {
     <main class="page">
       <div class="container">
         <h2>Sobre Nós</h2>
-        <div class="row">
+        <div class="row-cards">
           <div class="card-person">
             <div class="img-container">
               <img src={anna} alt="foto anna" />
