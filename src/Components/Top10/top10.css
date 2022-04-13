@@ -65,6 +65,70 @@
   .card-person-top10:hover img {
     filter: none;
   }
+
+  .flip-container {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+  }
+  
+  .flipper{
+    position: relative;
+    width: 80%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .back{
+    transform: rotateY(180deg);
+  }
+
+  .front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  #switch01:hover ~ .flip-container .flipper {
+    transform: rotateY(180deg);
+  }
+
+  #switch01{
+    display: none;
+  }
+
+  #switch02:hover ~ .flip-container .flipper {
+    transform: rotateY(180deg);
+  }
+
+  #switch02{
+    display: none;
+  }  
+  
+  #switch03:hover ~ .flip-container .flipper {
+    transform: rotateY(180deg);
+  }
+
+  #switch03{
+    display: none;
+  }
+
+  #switch04:hover ~ .flip-container .flipper {
+    transform: rotateY(180deg);
+  }
+
+  #switch04{
+    display: none;
+  }
+
+  #switch05:hover ~ .flip-container .flipper {
+    transform: rotateY(180deg);
+  }
+
+  #switch05{
+    display: none;
+  }
   
   
   @media (max-width: 575px) {

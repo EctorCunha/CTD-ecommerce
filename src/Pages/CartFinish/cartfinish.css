@@ -1,7 +1,19 @@
 .cart_finish {
   height: 100vh;
+  width: 100vw;
   background-image: url(../../Assets/Gif/final_purchase2.gif);
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position-y: center;
+  background-size: cover;
+  background-position: center center;
+}
+
+@media(max-width: 771px) {
+  .cart_finish {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../../Assets/Gif/final_purchase_480.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
 }
