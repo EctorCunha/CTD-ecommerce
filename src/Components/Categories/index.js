@@ -1,9 +1,9 @@
-import colecionavel from '../../Assets/Category/category_card_pink.svg'
-import viagem from '../../Assets/Category/category_card_lightblue.svg'
-import cooperativo from '../../Assets/Category/category_card_red.svg'
-import expert from '../../Assets/Category/category_card_orange.svg'
-import party from '../../Assets/Category/category_card_green.svg'
-import family from '../../Assets/Category/category_card_darkblue.svg'
+import colecionavel from '../../Assets/Category/category_card_pink.svg';
+import viagem from '../../Assets/Category/category_card_lightblue.svg';
+import cooperativo from '../../Assets/Category/category_card_red.svg';
+import expert from '../../Assets/Category/category_card_orange.svg';
+import party from '../../Assets/Category/category_card_green.svg';
+import family from '../../Assets/Category/category_card_darkblue.svg';
 import './categories.css';
 
 export default function Categories() {
