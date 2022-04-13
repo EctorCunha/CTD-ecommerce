@@ -5,13 +5,17 @@
     background-color: rgb(0, 0, 0);
 }
 
-.admin_body {
-    display: flex;
-    flex: 1;
-    min-height: 100vh;
+.admin_main {
     background-image: url(../../Assets/Adm/background_adm.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
+    background-position: center;
+}
+
+.admin_body {
+    display: flex;
+    min-height: 90vh;
+    padding-top:50px;
 }
 
 
@@ -214,6 +218,13 @@
 .admin_products_card_buttons {
     margin: 0 10px 0 30px;
 }
+
+
+/* FOOTER */
+.admin_footer{
+    height:300px;
+}
+
 
 @media (max-width: 1200px) {
     .admin_filter {
