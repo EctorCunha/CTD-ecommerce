@@ -36,7 +36,7 @@
   margin: 5px 5px;
   padding: 5px 5px;
   transition: all ease 0.3s;
-}
+} 
 
 .img-container-category {
   height: 25vh;
@@ -60,7 +60,6 @@
 .card-person-category:hover img {
   filter: none;
 }
-
 
 @media (max-width: 575px) {
   .row-category > div {
