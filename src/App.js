@@ -10,6 +10,7 @@ import Cart from "./Pages/Cart";
 import Adm from "./Pages/Adm"; 
 import Error404 from "./Pages/Error404";
 import CartFinish from "./Pages/CartFinish";
+import ChooseYourGame from "./Pages/ChooseYourGame";
 
 function App() {
   return (
@@ -18,8 +19,9 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/top10" element={<Top10 />} />
-          <Route path="/categories" element={<Categories />} />
+          <Route path="/" element={<Top10 />} />
+          <Route path="/" element={<Categories />} />
+          <Route path="/chooseyourgame" element={<ChooseYourGame/>} />
           <Route path="/aboutyourgame" element={<AboutYourGame/>} />
           <Route path="/about" element={<About />} />
           <Route path="/cart" element={<Cart />} />

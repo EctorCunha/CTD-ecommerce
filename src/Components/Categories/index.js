@@ -4,6 +4,7 @@ import cooperativo from '../../Assets/Category/category_card_red.svg';
 import expert from '../../Assets/Category/category_card_orange.svg';
 import party from '../../Assets/Category/category_card_green.svg';
 import family from '../../Assets/Category/category_card_darkblue.svg';
+import {Link} from 'react-router-dom';
 import './categories.css';
 
 export default function Categories() {
@@ -15,37 +16,37 @@ export default function Categories() {
 
           <div className="card-person-category">
             <div className="img-container-category">
-              <img src={colecionavel} alt="card colecionável" />
+              <Link to={'/chooseyourgame'} target='_blank'><img src={colecionavel} alt="card colecionável" /></Link>
             </div>
           </div>
 
           <div className="card-person-category">
             <div className="img-container-category">
-              <img src={viagem} alt="card viagem" />
+            <Link to={'/chooseyourgame'} target='_blank'><img src={viagem} alt="card viagem" /></Link>
             </div>
           </div>
 
           <div className="card-person-category">
             <div className="img-container-category">
-              <img src={cooperativo} alt="card cooperativo" />
+            <Link to={'/chooseyourgame'} target='_blank'><img src={cooperativo} alt="card cooperativo" /></Link>
             </div>
           </div>
 
           <div className="card-person-category">
             <div className="img-container-category">
-              <img src={expert} alt="card expert" />
+            <Link to={'/chooseyourgame'} target='_blank'><img src={expert} alt="card expert" /></Link>
             </div>
           </div>
 
           <div className="card-person-category">
             <div className="img-container-category">
-              <img src={party} alt="card party" />
+            <Link to={'/chooseyourgame'} target='_blank'><img src={party} alt="card party" /></Link>
             </div>
           </div>
 
           <div className="card-person-category">
             <div className="img-container-category">
-              <img src={family} alt="card family" />
+            <Link to={'/chooseyourgame'} target='_blank'><img src={family} alt="card family" /></Link>
             </div>
           </div>
 

@@ -2,7 +2,6 @@ import logoHome from '../../Assets/Basic/logo-gamenight.svg';
 import imgHome from '../../Assets/Home/home-photo.png';
 import Categories from '../../Components/Categories';
 import Top10 from '../../Components/Top10';
-// import Footer from '../../Components/Footer';
 import './home.css'
 
 export default function Home() {

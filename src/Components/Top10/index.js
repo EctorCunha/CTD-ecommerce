@@ -35,9 +35,9 @@ export default function Top10() {
                     </label>
 
                     
-                        </div>
-
                     </div>
+
+                </div>
 
 
                 <div class="card-person-top10">
@@ -55,9 +55,9 @@ export default function Top10() {
                     </label>
 
                     
-                        </div>
-
                     </div>
+
+                </div>
 
 
                 <div class="card-person-top10">
@@ -75,9 +75,9 @@ export default function Top10() {
                     </label>
 
                     
-                        </div>
-
                     </div>
+
+                </div>
 
 
                 <div class="card-person-top10">
@@ -95,9 +95,9 @@ export default function Top10() {
                     </label>
 
                     
-                        </div>
-
                     </div>
+
+                </div>
 
 
                 <div class="card-person-top10">
@@ -115,9 +115,9 @@ export default function Top10() {
                     </label>
 
                     
-                        </div>
-
                     </div>
+
+                </div>
 
                 </div>
             </div>
