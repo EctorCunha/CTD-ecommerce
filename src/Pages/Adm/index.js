@@ -1,15 +1,14 @@
 
-import { useEffect, useState } from "react";
+import { useEffect, useState} from "react";
 import { FiEdit, FiTrash } from "react-icons/fi";
 
-import getProducts from "./services/getProducts";
-import getCategories from "./services/getCategories";
-import deleteProduct from "./services/deleteProduct";
-import filterByCategory from "./services/filterByCategory";
-import filterByPrice from "./services/filterByPrice";
-import saveProduct from "./services/saveProduct";
-import updateProduct from "./services/updateProduct";
-import getCategoryById from "./services/getCategoryById";
+import getProducts from "../../Services/getProducts";
+import getCategories from "../../Services/getCategories";
+import deleteProduct from "../../Services/deleteProduct";
+import filterByCategory from "../../Services/filterByCategory";
+import filterByPrice from "../../Services/filterByPrice";
+import saveProduct from "../../Services/saveProduct";
+import updateProduct from "../../Services/updateProduct";
 
 import "./adm.css";
 
@@ -119,6 +118,7 @@ export default function Adm() {
   return (
     <div className="admin_container">
       <div className="admin_header"></div>
+      <div className="admin_main">
       <div className="admin_body">
         <form onSubmit={id ? editProduct : newProduct}>
           <h1>Cadastro/Edição de Produtos</h1>
@@ -238,6 +238,7 @@ export default function Adm() {
             <button type="button" onClick={() => getProducts(setProducts, clearStates)}>Mostrar Todos</button>
           </div>               
 
+
           <ul className="admin_products_card">
             {products.map((produtc) => 
             (
@@ -266,12 +267,12 @@ export default function Adm() {
                 </div>
               </li>
             ))}
-
-          </ul>
+          </ul> 
         </div>
-
+        </div>
+        <div className="admin_footer"></div>
       </div>
-
+    
     </div>
   );
 }
