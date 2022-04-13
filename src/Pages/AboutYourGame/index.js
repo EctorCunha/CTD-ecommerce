@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import jogo from '../../Assets/About/ector.jpeg';
 import './aboutYourGame.css';
 
@@ -11,7 +12,7 @@ export default function AboutYourGame () {
         
             <div className='game' >
                 <div className='game-image' >
-                    <img src={jogo}/>
+                    <img src={jogo} alt='imagem de um jogo'/>
                 </div>
                 
                 <div className='game-info' >
@@ -24,7 +25,7 @@ export default function AboutYourGame () {
 
                     <div className='price' >
                     <span>R$ 379,99</span>
-                    <button>COMPRAR!</button>
+                    <Link to={'/cart'}><button className='btn'>COMPRAR!</button></Link>
                     </div>
 
                     <div className='icons' >

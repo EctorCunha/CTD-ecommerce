@@ -58,7 +58,7 @@
     font-size: 2.5rem;
 }
 
-.price > button {
+.price .btn {
     width: 10vw;
     border-radius: 10px;
     border: none;
