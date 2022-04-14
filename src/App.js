@@ -11,10 +11,13 @@ import Adm from "./Pages/Adm";
 import Error404 from "./Pages/Error404";
 import CartFinish from "./Pages/CartFinish";
 import ChooseYourGame from "./Pages/ChooseYourGame";
+import Teste from "./Pages/Teste";
+import CartProvider from "./Context/cart";
 
 function App() {
   return (
     <div className="App">
+      <CartProvider>
       <BrowserRouter>
         <Header />
         <Routes>
@@ -27,10 +30,12 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/cart/finish" element={<CartFinish />} />
           <Route path="/adm" element={<Adm />} />
+          <Route path="/teste" element={<Teste />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
         <Footer />
       </BrowserRouter>
+       </CartProvider>
     </div>
   );
 }

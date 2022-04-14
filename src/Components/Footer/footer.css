@@ -9,4 +9,11 @@ footer{
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     padding: 10px;
+    text-align: center;
+}
+
+@media(max-width: 321px){
+    footer{
+        font-size: 0.3rem;
+    }
 }
