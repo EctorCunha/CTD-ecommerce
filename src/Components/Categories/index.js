@@ -21,12 +21,13 @@ export default function Top10() {
       <h1 className="title-category">ESCOLHA A CATEGORIA DO SEU JOGO</h1>
 
         <div className="row-category">
+          
           <div class="card-person-category">
             <div class="img-container-category">
               <input type="checkbox" id="switch01" />
               <label class="flip-container" for="switch01">
                 <div class="flipper">
-                  <Link to={"/chooseyourgame"} target="_blank">
+                  <Link to={"/chooseyourgame/"+1} target="_blank">
                     <div class="front">
                       <img src={um} alt="card um" />
                     </div>
@@ -44,7 +45,7 @@ export default function Top10() {
               <input type="checkbox" id="switch02" />
               <label class="flip-container" for="switch02">
                 <div class="flipper">
-                  <Link to={"/chooseyourgame"} target="_blank">
+                  <Link to={"/chooseyourgame/"+6} target="_blank">
                     <div class="front">
                       <img src={dois} alt="card dois" />
                     </div>
@@ -62,7 +63,7 @@ export default function Top10() {
               <input type="checkbox" id="switch03" />
               <label class="flip-container" for="switch03">
                 <div class="flipper">
-                  <Link to={"/chooseyourgame"} target="_blank">
+                  <Link to={"/chooseyourgame/"+2} target="_blank">
                     <div class="front">
                       <img src={tres} alt="card tres" />
                     </div>
@@ -80,7 +81,7 @@ export default function Top10() {
               <input type="checkbox" id="switch04" />
               <label class="flip-container" for="switch04">
                 <div class="flipper">
-                  <Link to={"/chooseyourgame"} target="_blank">
+                  <Link to={"/chooseyourgame/"+3} target="_blank">
                     <div class="front">
                       <img src={quatro} alt="card quatro" />
                     </div>
@@ -98,7 +99,7 @@ export default function Top10() {
               <input type="checkbox" id="switch05" />
               <label class="flip-container" for="switch05">
                 <div class="flipper">
-                  <Link to={"/chooseyourgame"} target="_blank">
+                  <Link to={"/chooseyourgame/"+5} target="_blank">
                     <div class="front">
                       <img src={cinco} alt="card cinco" />
                     </div>
@@ -116,7 +117,7 @@ export default function Top10() {
               <input type="checkbox" id="switch06" />
               <label class="flip-container" for="switch06">
                 <div class="flipper">
-                  <Link to={"/chooseyourgame"} target="_blank">
+                  <Link to={"/chooseyourgame/"+4} target="_blank">
                     <div class="front">
                       <img src={seis} alt="card seis" />
                     </div>
