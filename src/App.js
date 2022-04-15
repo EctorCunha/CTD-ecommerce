@@ -24,8 +24,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/" element={<Top10 />} />
           <Route path="/" element={<Categories />} />
-          <Route path="/chooseyourgame" element={<ChooseYourGame/>} />
-          <Route path="/aboutyourgame" element={<AboutYourGame/>} />
+          <Route path="/chooseyourgame/:code" element={<ChooseYourGame/>} />
+          <Route path="/aboutyourgame/:code" element={<AboutYourGame/>} />
           <Route path="/about" element={<About />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/cart/finish" element={<CartFinish />} />

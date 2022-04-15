@@ -1,7 +1,118 @@
-.choose-your-game{
+.choose_your_game{
     width: 100vw;
-    height: 100vh;
+    color: #fff;
+    min-height: 100vh;
+    border-radius: 0px;
+    font-family: 'Zen Kurenaido', sans-serif;
+    scroll-behavior: smooth;
+    text-align: center;
+}
+
+#choose_your_game1{
+    background-image: url(../../Assets/Category/category_background_pink.svg);
+}
+#choose_your_game2{
+    background-image: url(../../Assets/Category/category_background_red.svg);
+}
+#choose_your_game3{
+    background-image: url(../../Assets/Category/category_background_orange.svg);
+}
+#choose_your_game4{
+    background-image: url(../../Assets/Category/category_background_darkblue.svg);
+}
+#choose_your_game5{
+    background-image: url(../../Assets/Category/category_background_green.svg);
+}
+#choose_your_game6{
+    background-image: url(../../Assets/Category/category_background_lightblue.svg);
+}
+
+.choose_your_game .header{
+    height:150px;
+}
+
+.choose_your_game h1{
+    margin-bottom: 20px;
+    font-size:3.6rem;
+    font-weight: lighter;
+}
+
+.choose_your_game .product_container{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+}
+
+.choose_your_game .product_card{
+    border-radius: 5px;
+    width: 250px;
+    text-align: center;
+    margin: 10px 10px;
+    padding: 10px;
+    background-color:rgba(27, 27, 27, 0.856);
+    color: #fff;
+}
+
+.choose_your_game .product_card::marker{
+    color: rgba(163, 87, 87, 0);
+}
+
+#choose_your_game1 .product_card{
+    border: 3px solid #cf4492;
+    filter: brightness(1.1) drop-shadow(1px 1px 0.5rem #e71bbe);
+}
+#choose_your_game2 .product_card{
+    border: 3px solid #cf1111;
+    filter: brightness(1.1) drop-shadow(1px 1px 0.5rem #cf1111);
+}
+#choose_your_game3 .product_card{
+    border: 3px solid #ce711b;
+    filter: brightness(1.1) drop-shadow(1px 1px 0.5rem #ce711b);
+}
+#choose_your_game4 .product_card{
+    border: 3px solid #1e1bce;
+    filter: brightness(1.1) drop-shadow(1px 1px 0.5rem #1e1bce);
+}
+#choose_your_game5 .product_card{
+    border: 3px solid #63ce1b;
+    filter: brightness(1.1) drop-shadow(1px 1px 0.5rem #63ce1b);
+}
+
+#choose_your_game6 .product_card{
+    border: 3px solid #14da98;
+    filter: brightness(1.1) drop-shadow(1px 1px 0.5rem #14da98);
+}
+
+.choose_your_game .product_card h2{
+    height: 70px;
+    margin: 10px 0;
+}
+
+
+.choose_your_game .product_image{
+    height:220px;
+    width: 220px;
+    border-radius: 5px;
+}
+
+.choose_your_game .product_infos{
+    display: flex;
+    margin: 15px 0;
+}
+
+.choose_your_game .product_info{
+    width:33%;
+    margin:0;
+}
+
+.choose_your_game .product_info img{
+    height:40px;
+    width: 40px;
+    margin: 0;
+}
+
+
+
+a, a:link, a:visited, a:active, a:hover {
+    text-decoration: none!important;
 }
