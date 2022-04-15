@@ -34,7 +34,6 @@
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 3rem;
   }
   
   .card-person-top10 {
@@ -66,31 +65,31 @@
     filter: none;
   }
 
-  .flip-container {
+  .flip-container-top10 {
     width: 300px;
     height: 200px;
     perspective: 1000px;
   }
   
-  .flipper{
+  .flipper-top10{
     position: relative;
     width: 80%;
     transition: transform 0.8s;
     transform-style: preserve-3d;
   }
 
-  .back{
+  .back-top10{
     transform: rotateY(180deg);
   }
 
-  .front, .back{
+  .front-top10, .back-top10{
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
   }
 
-  #switch01:hover ~ .flip-container .flipper {
+  #switch01:hover ~ .flip-container-top10 .flipper-top10 {
     transform: rotateY(180deg);
   }
 
@@ -98,7 +97,7 @@
     display: none;
   }
 
-  #switch02:hover ~ .flip-container .flipper {
+  #switch02:hover ~ .flip-container-top10 .flipper-top10 {
     transform: rotateY(180deg);
   }
 
@@ -106,7 +105,7 @@
     display: none;
   }  
   
-  #switch03:hover ~ .flip-container .flipper {
+  #switch03:hover ~ .flip-container-top10 .flipper-top10 {
     transform: rotateY(180deg);
   }
 
@@ -114,7 +113,7 @@
     display: none;
   }
 
-  #switch04:hover ~ .flip-container .flipper {
+  #switch04:hover ~ .flip-container-top10 .flipper-top10 {
     transform: rotateY(180deg);
   }
 
@@ -122,7 +121,7 @@
     display: none;
   }
 
-  #switch05:hover ~ .flip-container .flipper {
+  #switch05:hover ~ .flip-container-top10 .flipper-top10 {
     transform: rotateY(180deg);
   }
 

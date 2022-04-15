@@ -1,3 +1,5 @@
+
+
 .page-category {
   display: flex;
   justify-content: center;
@@ -15,31 +17,33 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 6rem;
 }
 
-.title-category{
+
+.title-category {
+  margin-bottom: 10rem;
   font-weight: lighter;
   font-size: 3rem;
 }
 
-.row-category {
+.subtitle-category{
+  margin-bottom: 6rem;
+}
+
+.row-category{
   margin: auto;
   width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 3rem;
 }
 
 .card-person-category {
-  margin: 5px 5px;
-  padding: 5px 5px;
   transition: all ease 0.3s;
-} 
+}
 
-.img-container-category {
+.img-container-category{
   height: 25vh;
   margin: 0px;
   border-radius: 3px;
@@ -49,20 +53,91 @@
   position: relative;
 }
 
-
-
-.img-container-category img, a {
+.img-container-category > img {
   height: 100%;
   transition: all 0.3s ease-in-out;
 }
 
 .card-person-category:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .card-person-category:hover img {
   filter: none;
 }
+
+.flip-container{
+  width: 250px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.flipper{
+  position: relative;
+  width: 80%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.back{
+  transform: rotateY(180deg);
+}
+
+.front, .back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+#switch01:hover ~ .flip-container .flipper {
+  transform: rotateY(180deg);
+}
+
+#switch01{
+  display: none;
+}
+
+#switch02:hover ~ .flip-container .flipper {
+  transform: rotateY(180deg);
+}
+
+#switch02{
+  display: none;
+}  
+
+#switch03:hover ~ .flip-container .flipper {
+  transform: rotateY(180deg);
+}
+
+#switch03{
+  display: none;
+}
+
+#switch04:hover ~ .flip-container .flipper {
+  transform: rotateY(180deg);
+}
+
+#switch04{
+  display: none;
+}
+
+#switch05:hover ~ .flip-container .flipper {
+  transform: rotateY(180deg);
+}
+
+#switch05{
+  display: none;
+}
+
+#switch06:hover ~ .flip-container .flipper {
+  transform: rotateY(180deg);
+}
+
+#switch06{
+  display: none;
+}
+
 
 @media (max-width: 575px) {
   .row-category > div {
