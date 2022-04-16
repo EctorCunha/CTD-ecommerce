@@ -1,20 +1,22 @@
 import './cart.css'
 import { Link } from 'react-router-dom'
-import React, { useContext } from "react";
-import { CartContext } from "../../Context/cart";
+import React, { useContext } from "react"
+import { CartContext } from "../../Context/cart"
+import emptyCart from "../../Assets/Cart/icon-cart-empty.svg"
+import { FiTrash } from "react-icons/fi";
 
 
 export default function Cart() {
-    const { productsCart, addProducToCart, removeProductsCart } = useContext(CartContext);
+    const { productsCart, addProducToCart, removeProductsCart, deleteProductsCart } = useContext(CartContext);
 
     let subtotal = 0;
-    productsCart.map((product) => (subtotal += (product.price*product.qtd)))
+    productsCart.map((product) => (subtotal += (product.price * product.qtd)))
 
-    let subtotal01 = subtotal.toLocaleString('pt-BR', { maximumFractionDigits: 2 } )
+    let subtotal01 = subtotal.toLocaleString('pt-BR', { maximumFractionDigits: 2, minimumFractionDigits: 2 })
 
-    let frete = (subtotal * 0.1).toLocaleString('pt-BR', { maximumFractionDigits: 2 } );
+    let frete = (subtotal * 0.1).toLocaleString('pt-BR', { maximumFractionDigits: 2, minimumFractionDigits: 2 });
 
-    let total = (subtotal + (subtotal * 0.1)).toLocaleString('pt-BR', { maximumFractionDigits: 2 } );
+    let total = (subtotal + (subtotal * 0.1)).toLocaleString('pt-BR', { maximumFractionDigits: 2, minimumFractionDigits: 2 });
 
 
     return (
@@ -25,42 +27,61 @@ export default function Cart() {
                     <div className='cart_info'>
                         <div className='cart_product'>
                             <div className='cart_attribute'>
-                                <p className='cart_att_product'>PRODUTO</p>
-                                <p>PREÇO</p>
-                                <p>QUANTIDADE</p>
-                                <p>TOTAL</p>
+                                <div className='cart_att' id='cart_att_product'>
+                                    <p>PRODUTO</p>
+                                </div>
+                                <div className='cart_att'>
+                                    <p>PREÇO</p>
+                                </div>
+                                <div className='cart_att'>
+                                    <p>QUANTIDADE</p>
+                                </div>
+                                <div className='cart_att'>
+                                    <p>TOTAL</p>
+                                </div>
+                                <div className='cart_att'>
+                                    <p>EXCLUIR</p>
+                                </div>
                             </div>
                             <div className='cart_card_all'>
                                 <ul>
-                                    {productsCart.map((product) =>
-                                    (
-                                        <li>
-                                            <div className='cart_card'>
-                                                <div className='cart_about'>
-                                                    <div>
-                                                        <img className='cart_image' src={product.image} alt={product.title} /></div>
-                                                    <div className='cart_text'>
-                                                        <p> TÍTULO: {product.title}</p>
-                                                        <p>IDIOMA: {product.language}</p>
-                                                        <p>IDADE: {product.age}</p>
-                                                    </div>
-                                                </div>
-                                                <div className='cart_info_price'>
-                                                    <div className='cart_unit_price'><p>{(product.price).toLocaleString('pt-BR', { maximumFractionDigits: 2 } )}</p></div>
-                                                    <div className='cart_unit'>
-                                                        <div className='cart_unit_button'>
-                                                            <button id='button_increment' onClick={() => { removeProductsCart(product.id) }}>&lt;</button>
-                                                            <p id='number'>{product.qtd}</p>
-                                                            <button id='button_decrement' onClick={() => { addProducToCart(product.id) }}>&gt;</button>
+                                    {productsCart.map(
+
+                                        (product) =>
+                                        (
+                                            <li>
+                                                <div className='cart_card'>
+                                                    <div className='cart_about'>
+                                                        <div>
+                                                            <img className='cart_image' src={product.image} alt={product.title} /></div>
+                                                        <div className='cart_text'>
+                                                            <p> TÍTULO: {product.title}</p>
+                                                            <p>IDIOMA: {product.language}</p>
+                                                            <p>IDADE: {product.age}</p>
                                                         </div>
                                                     </div>
-                                                    <div className='cart_unit_price'><p>{((product.price) * (product.qtd)).toLocaleString('pt-BR', { maximumFractionDigits: 2 } )}</p></div>
+                                                    <div className='cart_info_price'>
+                                                        <div className='cart_unit_price'><p>{(product.price).toLocaleString('pt-BR', { maximumFractionDigits: 2, minimumFractionDigits: 2 })}</p></div>
+                                                        <div className='cart_unit'>
+                                                            <div className='cart_unit_button'>
+                                                                <button id='button_increment' onClick={() => { removeProductsCart(product.id) }}>&lt;</button>
+                                                                <p id='number'>{product.qtd}</p>
+                                                                <button id='button_decrement' onClick={() => { addProducToCart(product.id) }}>&gt;</button>
+                                                            </div>
+                                                        </div>
+                                                        <div className='cart_unit_price'><p>{((product.price) * (product.qtd)).toLocaleString('pt-BR', { maximumFractionDigits: 2, minimumFractionDigits: 2 })}</p></div>
+                                                        <button id='button_delete'><FiTrash size={20} color="#cf4492" onClick={() => deleteProductsCart(product.id)}/></button>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                    ))}
+                                            </li>
+                                        ))}
                                 </ul>
-
+                                {(productsCart.length === 0) ?
+                                    <div className="cart_empty_container">
+                                        <img src={emptyCart} alt="icon empty cart" />
+                                        <p>carrinho vazio</p>
+                                    </div>
+                                    : <div></div>}
                             </div>
                         </div>
 
@@ -76,14 +97,12 @@ export default function Cart() {
                                 <p>TOTAL:</p><p>{total}</p>
                             </div>
                             <div className='cart_price_button'>
-                                <Link to={'/categories'}><button id='button_back'>VOLTAR AO CATÁLOGO</button></Link>
+                                <Link to={'/'}><button id='button_back'>VOLTAR AO CATÁLOGO</button></Link>
                                 <Link to={'/cart/finish'}><button id='button_finish'>FINALIZAR PEDIDO</button></Link>
                             </div>
                         </div>
-
                     </div>
                 </div>
-
             </main>
         </>
 
