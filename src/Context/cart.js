@@ -21,22 +21,40 @@ export default function CartProvider({ children }) {
 
   function removeProductsCart(id){
     const copyProductsCart = [...productsCart];
+    
     const item = copyProductsCart.filter((product) => product.id === id);
-
+    
     if(item.length > 0) {
-
-    if (item[0].qtd > 1) {
-      item[0].qtd = item[0].qtd - 1;
-    } else {
+      if (item[0].qtd > 1) {
+        item[0].qtd = item[0].qtd - 1;
+      } else {
       const arrayFilter = copyProductsCart.filter((product) => product.id !== id);
       setProductsCart(arrayFilter);
     }} else{
       alert("Produto não encontrado")
     }
+      setProductsCart(copyProductsCart);
+  }
+
+  function deleteProductsCart(id){
+    const copyProductsCart = [...productsCart];
+    
+    const item = copyProductsCart.filter((product) => product.id === id);
+    const arrayFilter = copyProductsCart.filter((product) => product.id !== id);
+
+    if(item.length > 0) {
+    if (item[0].qtd > 1) {
+      item[0].qtd = item[0].qtd - 1;
+    } else {
+      setProductsCart(arrayFilter);
+    }} else{
+      alert("Produto não encontrado")
+    }
+    setProductsCart(arrayFilter);
   }
 
   return (
-    <CartContext.Provider value={{ productsCart, addProducToCart, removeProductsCart }}>
+    <CartContext.Provider value={{ productsCart, addProducToCart, removeProductsCart, deleteProductsCart }}>
       {children}
     </CartContext.Provider>
   );
