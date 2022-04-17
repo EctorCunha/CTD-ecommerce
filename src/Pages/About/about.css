@@ -136,13 +136,6 @@
   margin: 0 0.4rem;
   height: 35px;
   transition: all ease 0.3s;
-}
-
-#github {
-  filter: brightness(0%) invert(1);
-}
-
-#linkedin {
   filter: brightness(0%) invert(1);
 }
 
