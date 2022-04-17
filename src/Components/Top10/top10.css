@@ -1,145 +1,117 @@
 .top10 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(../../Assets/Home/home-background-02.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url(../../Assets/Home/home-background-02.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
 }
-  
-  .container-top10 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
 
-  
-  .title-top10, .subtitle-top10 {
+.transition2 {
+  height: 10vh;
+  width: 100%;
+  background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgb(0, 0, 0));
+}
+
+.container-top10 {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title-top10,
+.subtitle-top10 {
+  font-weight: lighter;
+  font-size: 3rem;
+}
+
+.title-top10 {
+  margin-top: 3rem;
+}
+
+.subtitle-top10 {
+  margin-bottom: 5rem;
+}
+
+.row-top10 {
+  margin: 0 0 auto 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card-person-top10 {
+  margin: 5px 10px;
+  transition: all ease 0.3s;
+  height:254px;
+  width: 175px;
+}
+
+.img-container-top10 {
+  margin: 0px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.img-container-top10>img {
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-person-top10:hover {
+  transform: scale(1.1);
+}
+
+.card-person-top10:hover img {
+  filter: none;
+}
+
+.transition3 {
+  height: 10vh;
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgb(0, 0, 0));
+}
+
+
+
+@media (max-width: 800px) {
+  .title-top10,
+  .subtitle-top10 {
     font-weight: lighter;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 0 20px;
   }
+  .title-top10 {
+    margin-top: 3rem;
+  }
+  .subtitle-top10 {
+    margin-bottom: 3rem;
+  }
+}
 
-  .subtitle-top10{
-    margin-bottom: 6rem;
+
+@media (max-width: 670px) {
+  .title-top10 {
+    margin-top: 3rem;
   }
+  .subtitle-top10 {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 575px) {
+
   
-  .row-top10{
-    margin: auto;
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .card-person-top10 {
-    margin: 5px 5px;
-    padding: 5px 5px;
-    transition: all ease 0.3s;
-  }
-  
-  .img-container-top10 {
-    height: 25vh;
-    margin: 0px;
-    border-radius: 3px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-  }
-  
-  .img-container-top10 > img {
-    height: 100%;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .card-person-top10:hover {
-    transform: scale(1.1);
-  }
-  
-  .card-person-top10:hover img {
-    filter: none;
-  }
-
-  .flip-container-top10 {
-    width: 300px;
-    height: 200px;
-    perspective: 1000px;
-  }
-  
-  .flipper-top10{
-    position: relative;
-    width: 80%;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-
-  .back-top10{
-    transform: rotateY(180deg);
-  }
-
-  .front-top10, .back-top10{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-  }
-
-  #switch01:hover ~ .flip-container-top10 .flipper-top10 {
-    transform: rotateY(180deg);
-  }
-
-  #switch01{
-    display: none;
-  }
-
-  #switch02:hover ~ .flip-container-top10 .flipper-top10 {
-    transform: rotateY(180deg);
-  }
-
-  #switch02{
-    display: none;
-  }  
-  
-  #switch03:hover ~ .flip-container-top10 .flipper-top10 {
-    transform: rotateY(180deg);
-  }
-
-  #switch03{
-    display: none;
-  }
-
-  #switch04:hover ~ .flip-container-top10 .flipper-top10 {
-    transform: rotateY(180deg);
-  }
-
-  #switch04{
-    display: none;
-  }
-
-  #switch05:hover ~ .flip-container-top10 .flipper-top10 {
-    transform: rotateY(180deg);
-  }
-
-  #switch05{
-    display: none;
-  }
-  
-  
-  @media (max-width: 575px) {
-    .row-top10 > div {
-      padding: 0;
-      padding-bottom: 8px;
-    }
-    div > img {
-      width: 90vw;
-    }
-    .img-container-top10:hover {
-      width: 100vw;
-    }
-    
-  }
+}

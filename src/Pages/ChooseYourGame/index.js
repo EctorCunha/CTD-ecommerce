@@ -55,6 +55,7 @@ export default function ChooseYouGame() {
           ))}
         </ul>
       </div>
+      <div className='footer'></div>
     </section>
   )
 }

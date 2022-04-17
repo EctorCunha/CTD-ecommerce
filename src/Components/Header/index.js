@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { HashLink} from 'react-router-hash-link';
 import { useState} from "react";
 import "./header.css";
 import logo_header from "../../Assets/Header/logo-header.png";
@@ -44,13 +45,13 @@ export default function Header() {
               <li onClick={() => scroll("page-1")}>HOME</li>
             </Link>
             <span>|</span>
-            <Link to={"/"}>
-              <li onClick={() => scroll("top10")}>TOP 10</li>
-            </Link>
+            <HashLink to={"/#top10"}>
+              <li>TOP 10</li>
+            </HashLink>
             <span>|</span>
-            <Link to={"/"}>
-              <li onClick={() => scroll("page-category")}>CATEGORIAS</li>
-            </Link>
+            <HashLink to={"/#categories"}>
+              <li>CATEGORIAS</li>
+            </HashLink>
             <span>|</span>
             <Link to={"/about"}>
               <li>SOBRE NÓS</li>

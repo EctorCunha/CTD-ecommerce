@@ -14,9 +14,10 @@ import family from "../../Assets/Category/category_card_darkblue.svg";
 import { Link } from "react-router-dom";
 import "./categories.css";
 
-export default function Top10() {
+export default function Categories() {
   return (
-    <section className="page-category" id="page-category">
+    <section className="page-category" id="categories">
+      <div className="transition2"></div>
       <div className="container-category">
       <h1 className="title-category">ESCOLHA A CATEGORIA DO SEU JOGO</h1>
 
@@ -131,6 +132,7 @@ export default function Top10() {
           </div>
         </div>
       </div>
+      <div className="transition1"></div>
     </section>
   );
 }
