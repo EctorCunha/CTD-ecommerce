@@ -1,0 +1,9 @@
+.page-access-restricted {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../../Assets/Gif/adm.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+}
+

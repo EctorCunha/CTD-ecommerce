@@ -12,6 +12,7 @@ import Error404 from "./Pages/Error404";
 import CartFinish from "./Pages/CartFinish";
 import ChooseYourGame from "./Pages/ChooseYourGame";
 import CartProvider from "./Context/cart";
+import AccessRestricted from "./Pages/AccessRestricted";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/cart/finish" element={<CartFinish />} />
           <Route path="/adm" element={<Adm />} />
+          <Route path="/accessrestricted" element={<AccessRestricted />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
         <Footer />
