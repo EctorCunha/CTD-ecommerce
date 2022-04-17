@@ -28,7 +28,11 @@
 }
 
 .choose_your_game .header{
-    height:150px;
+    height:130px;
+}
+
+.choose_your_game .footer{
+    height:100px;
 }
 
 .choose_your_game h1{
@@ -41,13 +45,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding:0 20px;
 }
 
 .choose_your_game .product_card{
     border-radius: 5px;
     width: 250px;
     text-align: center;
-    margin: 10px 10px;
+    margin: 15px 15px;
     padding: 10px;
     background-color:rgba(27, 27, 27, 0.856);
     color: #fff;
@@ -77,14 +82,19 @@
     border: 3px solid #63ce1b;
     filter: brightness(1.1) drop-shadow(1px 1px 0.5rem #63ce1b);
 }
-
 #choose_your_game6 .product_card{
     border: 3px solid #14da98;
     filter: brightness(1.1) drop-shadow(1px 1px 0.5rem #14da98);
 }
 
+.product_card:hover{
+    background-color:rgba(27, 27, 27, 0.699);
+    filter: brightness(10);
+    transform: scale(1.1);
+}
+
 .choose_your_game .product_card h2{
-    height: 70px;
+    height: 40px;
     margin: 10px 0;
 }
 

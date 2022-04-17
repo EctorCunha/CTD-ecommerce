@@ -85,6 +85,8 @@
   transform: scale(1.05);
 }
 
+
+/*
 @media (max-width: 575px) {
   .row > div {
     padding: 0;
@@ -104,3 +106,4 @@
     padding: 30px 8px;
   }
 }
+*/
