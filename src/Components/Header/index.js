@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
+import { useState} from "react";
 import "./header.css";
 import logo_header from "../../Assets/Header/logo-header.png";
 import icon_cart from "../../Assets/Basic/icon-cart.svg";
 import icon_adm from "../../Assets/Basic/icon-adm.svg";
 
 export default function Header() {
+
+  const [user, setUser] = useState("");
+  const [password, setPassword] = useState("");
+
   function openModal() {
     const modal = document.querySelector(".modal");
     modal.showModal();
@@ -15,6 +20,14 @@ export default function Header() {
   }
   function scroll(id) {
     document.getElementById(id).scrollIntoView();
+  }
+
+  function route(){
+    if(user=="adm" && password=="1234"){
+      return "/adm";
+    } else {
+      return "/accessrestricted";
+    }
   }
 
   return (
@@ -74,6 +87,8 @@ export default function Header() {
               id="email"
               placeholder="EMAIL"
               required
+              value={user}
+              onChange={(event) => setUser(event.target.value)}
             />
             <input
               type="password"
@@ -81,8 +96,10 @@ export default function Header() {
               id="password"
               placeholder="SENHA"
               required
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
             />
-            <Link to={"/adm"}>
+            <Link to={route()}>
               <button className="form-button" onClick={closeModal}>
                 ENTRAR
               </button>
