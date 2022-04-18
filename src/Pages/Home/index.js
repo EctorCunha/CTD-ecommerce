@@ -18,7 +18,7 @@ export default function Home() {
   }, [i])
 
   function timing() {
-    if (i < 2) {
+    if (i < 8) {
       return i++;
     } else {
       return i = 0;

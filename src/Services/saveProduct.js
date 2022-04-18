@@ -5,7 +5,7 @@ export default async function saveProduct(body,getProducts,setProducts,clearStat
           body: JSON.stringify(body),
           headers: { "Content-type": "application/json; charset=UTF-8" }
         });
-        alert("Cadastrado com sucesso");
+        alert("Produto cadastrado com sucesso");
         getProducts(setProducts,clearStates);
       } catch (error) {
         alert("Erro ao cadastrar Produto");

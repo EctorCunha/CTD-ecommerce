@@ -5,7 +5,7 @@ export default async function updateProduct(body,getProducts,setProducts,clearSt
           body: JSON.stringify(body),
           headers: { "Content-type": "application/json; charset=UTF-8" }
         });
-        alert("produtc updated");
+        alert("Produto atualizado com sucesso");
         getProducts(setProducts,clearStates);
       } catch (error) {
         alert("Erro ao alterar");

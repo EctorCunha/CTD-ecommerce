@@ -42,6 +42,11 @@
     font-size: 1.3rem;
     color: #fff;
 }
+.admin_container .form_edit {
+    background: #616161a6;
+    border: 3px solid #cf4492;
+    border-left: none;
+}
 
 .admin_container form div {
     display: flex;

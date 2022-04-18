@@ -65,6 +65,29 @@
   filter: none;
 }
 
+.img-container-category .img_2{
+  width: 130px;
+  position: absolute;
+  margin-left:-150px;
+  margin-top:80px;
+  filter: brightness(1.3);
+}
+.img-container-category #lightBlue{
+  filter: brightness(1.5) hue-rotate(225deg);
+}
+.img-container-category #red{
+  filter: brightness(1.3) hue-rotate(40deg);
+}
+.img-container-category #orange{
+  filter: brightness(1.5) hue-rotate(90deg);
+}
+.img-container-category #green{
+  filter: brightness(1.5) hue-rotate(160deg);
+}
+.img-container-category #darkBlue{
+  filter: brightness(1.5) hue-rotate(290deg);
+}
+
 .flip-container {
   width: 250px;
   height: 200px;
@@ -90,6 +113,7 @@
   height: 100%;
   backface-visibility: hidden;
 }
+
 
 #switch01:hover~.flip-container .flipper {
   transform: rotateY(180deg);

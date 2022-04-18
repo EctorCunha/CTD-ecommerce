@@ -119,8 +119,8 @@ export default function Adm() {
       <div className="admin_header"></div>
       <div className="admin_main">
       <div className="admin_body">
-        <form onSubmit={id ? editProduct : newProduct}>
-          <h1>Cadastro/Edição de Produtos</h1>
+        <form className={id ? "form_edit" : "form_save"} onSubmit={id ? editProduct : newProduct}>
+          <h1>{id ? "Edição" : "Cadastro"} de Produtos</h1>
           <div className="inputs">
             <label>
               <span>Título</span>
