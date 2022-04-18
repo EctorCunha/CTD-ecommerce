@@ -1,15 +1,13 @@
 
-import { useEffect, useState } from "react";
+import { useEffect, useState} from "react";
 import { FiEdit, FiTrash } from "react-icons/fi";
-
-import getProducts from "./services/getProducts";
-import getCategories from "./services/getCategories";
-import deleteProduct from "./services/deleteProduct";
-import filterByCategory from "./services/filterByCategory";
-import filterByPrice from "./services/filterByPrice";
-import saveProduct from "./services/saveProduct";
-import updateProduct from "./services/updateProduct";
-import getCategoryById from "./services/getCategoryById";
+import getProducts from "../../Services/getProducts";
+import getCategories from "../../Services/getCategories";
+import deleteProduct from "../../Services/deleteProduct";
+import filterByCategory from "../../Services/filterByCategory";
+import filterByPrice from "../../Services/filterByPrice";
+import saveProduct from "../../Services/saveProduct";
+import updateProduct from "../../Services/updateProduct";
 
 import "./adm.css";
 
@@ -119,6 +117,7 @@ export default function Adm() {
   return (
     <div className="admin_container">
       <div className="admin_header"></div>
+      <div className="admin_main">
       <div className="admin_body">
         <form onSubmit={id ? editProduct : newProduct}>
           <h1>Cadastro/Edição de Produtos</h1>
@@ -146,7 +145,7 @@ export default function Adm() {
                 onChange={(event) => setImage(event.target.value)}
               />
             </label>
-            <div>
+            <div className="form_div">
               <label>
                 <span>Idade Mínima</span>
                 <input
@@ -162,7 +161,7 @@ export default function Adm() {
                 />
               </label>
             </div>
-            <div>
+            <div className="form_div">
               <label>
                 <span>Mínimo Jogadores</span>
                 <input
@@ -178,7 +177,7 @@ export default function Adm() {
                 />
               </label>
             </div>
-            <div>
+            <div className="form_div">
               <label>
                 <span>Idioma</span>
                 <input
@@ -205,8 +204,8 @@ export default function Adm() {
             </label>
           </div>
           <div className="container-buttons">
-            <button type="submit">{!id ? "Salvar" : "Alterar"}</button>
-            <button type="button" onClick={clearStates}>Limpar</button>
+            <button type="submit">{!id ? "SALVAR" : "ALTERAR"}</button>
+            <button className="clean" type="button" onClick={clearStates}>LIMPAR</button>
           </div>
         </form>
 
@@ -235,8 +234,9 @@ export default function Adm() {
                 <option value={500}>Até R$500</option>
               </select>
             </label>
-            <button type="button" onClick={() => getProducts(setProducts, clearStates)}>Mostrar Todos</button>
+            <button type="button" onClick={() => getProducts(setProducts, clearStates)}>MOSTRAR TODOS</button>
           </div>               
+
 
           <ul className="admin_products_card">
             {products.map((produtc) => 
@@ -257,8 +257,9 @@ export default function Adm() {
                   </div>
                 </div>
                 <div className="admin_products_card_buttons">
-                  <FiEdit size={30} color="#cf4492" onClick={() => fillStates(produtc)} />
+                  <FiEdit className="icon" size={30} color="#cf4492" onClick={() => fillStates(produtc)} />
                   <FiTrash
+                    className="icon"
                     size={30}
                     color="#cf4492"
                     onClick={() => deleteProduct(produtc.id, getProducts, setProducts, clearStates)}
@@ -266,12 +267,12 @@ export default function Adm() {
                 </div>
               </li>
             ))}
-
-          </ul>
+          </ul> 
         </div>
-
+        </div>
+        <div className="admin_footer"></div>
       </div>
-
+    
     </div>
   );
 }

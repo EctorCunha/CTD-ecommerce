@@ -1,14 +1,32 @@
-.container-about-your-game{
+.about_your_game{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: white;
-    background-image: url(../../Assets/Category/category_background_pink.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    color: white; 
+    font-family: 'Zen Kurenaido', sans-serif;
+    scroll-behavior: smooth;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+}
+
+#about_your_game1{
+    background-image: url(../../Assets/Category/category_background_pink.svg);
+}
+#about_your_game2{
+    background-image: url(../../Assets/Category/category_background_red.svg);
+}
+#about_your_game3{
+    background-image: url(../../Assets/Category/category_background_orange.svg);
+}
+#about_your_game4{
+    background-image: url(../../Assets/Category/category_background_darkblue.svg);
+}
+#about_your_game5{
+    background-image: url(../../Assets/Category/category_background_green.svg);
+}
+#about_your_game6{
+    background-image: url(../../Assets/Category/category_background_lightblue.svg);
 }
 
 .title-about-your-game{
@@ -17,7 +35,7 @@
     margin-bottom: 60px;
 }
 
-.game{
+.about_your_game .game{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,41 +44,103 @@
     gap: 2rem;
 }
 
-.game-image img{
-    width: 18vw;
+.about_your_game .game-image img{
     height: 45vh;
+    width: 45vh;
     margin-left: -10px;
     margin-bottom: -5px;
     border-radius: 10px;
 }
 
-.game-info{
-    background: linear-gradient(90deg, #4F214B, #B6388C);
-    width: 40vw;
+.about_your_game .game_container{
+    display: flex;
     height: 45vh;
-    margin-right: -5px;
     border-radius: 10px;
-    border: 2px solid rgb(149, 97, 139);
-    filter: drop-shadow(0 0 4px rgb(231, 226, 231));
+    background-color:#0000007c;
 }
 
-.game-info h2{
-    margin-bottom: 40px;
+.about_your_game #game_container1{
+    border: 3px solid #cf4492;
+    filter: brightness(1.1) drop-shadow(1px 1px 0.5rem #e71bbe);
+}
+.about_your_game #game_container2{
+    border: 3px solid #cf1111;
+    filter: brightness(1.1) drop-shadow(1px 1px 0.5rem #cf1111);
+}
+.about_your_game #game_container3{
+    border: 3px solid #ce721b;
+    filter: brightness(1.5) drop-shadow(10px 10px 0.5rem #ce711b);
+}
+.about_your_game #game_container4{
+    border: 3px solid #1e1bce;
+    filter: brightness(1.1) drop-shadow(1px 1px 0.5rem #1e1bce);
+}
+.about_your_game #game_container5{
+    border: 3px solid #63ce1b;
+    filter: brightness(1.1) drop-shadow(1px 1px 0.5rem #63ce1b);
+}
+.about_your_game #game_container6{
+    border: 3px solid #14da98;
+    filter: brightness(1.1) drop-shadow(1px 1px 0.5rem #14da98);
 }
 
-.price{
+.about_your_game .game-info{
+    width: 40vw;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about_your_game .game-info h2{
+    font-size: 1.8rem;
+}
+
+.about_your_game .game-info p{
+    margin: 30px 0;
+    font-size: 1.3rem;
+}
+
+.about_your_game .price{
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    height:100px;
 }
 
-.price > span {
-    font-size: 2.5rem;
+.about_your_game .price > span {
+    font-size: 2rem;
 }
 
-.price > button {
-    width: 10vw;
-    border-radius: 10px;
+.about_your_game .price .btn {
+    width: 15vw;
+    padding: 3px 0;
+    border-radius: 5px;
     border: none;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
+    color: rgb(10, 10, 10); 
+    font-weight: bold;
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+
+.about_your_game .product_infos{
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_your_game .product_info{
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_your_game .product_info img{
+    height:60px;
+    width: 60px;
+    margin: 0;
 }

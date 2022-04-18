@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# CTD Ecommerce - Projeto Integrador (3º bimestre)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Durante os últimos dois anos, especialmente em virtude do isolamento social, as pessoas modificaram seus hábitos de consumo.
 
-## Available Scripts
+Em geral, muitas pessoas têm optado por fazer suas compras pelo comércio eletrônico. Para termos uma ideia, o e-commerce brasileiro cresceu cerca de 72% no primeiro trimestre de 2021 (comparado com o mesmo período de 2020) e o ticket médio de compras subiu 9,4% chegando a R$447,90, segundo o relatório da empresa de consultorias NeoTrust¹. 
 
-In the project directory, you can run:
+A CTD Commerce é uma empresa que atua neste segmento de mercado e desenvolve soluções em comércio eletrônico. Neste projeto, temos que desenvolver um protótipo de e-commerce para um dos clientes da CTD Commerce.
 
-### `npm start`
+Atentem-se para o briefing que o cliente da CTD Commerce passou para o desenvolvimento deste protótipo.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🌎 Requisitos gerais
+- O trabalho será desenvolvido em grupos de 4 ou 5 pessoas (Requisito indispensável);
+- Tanto o front quanto o back deverão constar em um (ou dois) repositórios (Github);
+- Prazo: o trabalho deverá ser entregue até o dia 20/04/2022.
+{Dica importante: dividam as responsabilidades entre os integrantes do grupo, de forma que as atividades sejam feitas em paralelo};
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🗄 Requisitos Back-end
+- Você deverá fazer o back-end de nosso e-commerce em Java com o Framework Spring no modelo MVC.
+- O banco de dados deverá ser o MySQL. 
+- Modelo de dados: O banco de dados terá duas entidades principais, products e categories. Onde cada produto tem apenas uma categoria e cada categoria pode ter vários ou nenhum produto.
+	
+### API - O projeto deverá disponibilizar uma API com quatro end-points: 
 
-### `npm test`
+- **Método POST** (https://ctdcommerce.com/products): este end-point deverá efetuar o cadastro de novos produtos. Para isso será necessário o envio das seguintes informações via corpo da requisição. Por exemplo:
+{ “title”: “Bolsa”, “price”: 350.50, “category”: 1, “description”: “Produto novo.”, “image”: ”url” }
+- **Método GET** (https://ctdcommerce.com/products): este end-point deverá disponibilizar os dados de todos os produtos cadastrados em um JSON.
+- **Método GET** (https://ctdcommerce.com/products/1): este end-point deverá disponibilizar os dados de um produto específico em um JSON.
+- **Método GET** (https://ctdcommerce.com/products/categories): este end-point deverá disponibilizar uma lista de categorias cadastradas em um JSON.
+- **Método PUT** (https://ctdcommerce.com/products): este end-point também será utilizado para atualizar produtos. Para isso, será necessário o envio das informações via corpo da requisição, alterando as informações desejadas e mantendo as anteriores. Por exemplo:
+{ “title”: “Bolsa”, “price”: 400.00, “category”: 1, “description”: “Produto novo.”, “image”: ”url” }
+- **Método DELETE** (https://ctdcommerce.com/products/1): este end-point será responsável por excluir um recurso da API Rest. Para isso, basta enviar por parâmetro, o id do produto.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ 
+## 💻 Requisitos Front-end
+- Todo o site deve estar responsivo.
+- O entregável será uma página em HTML5, SASS e React. Opcionalmente, o trabalho deve ser feito com React-Bootstrap.
+- Utilize a API criada no trabalho de Back-end acima para fornecer os dados necessários pro site. 
+- Header deve conter 5 itens além da logo. Cada item deve linkar com uma parte do site. Exemplo: Home, Produtos, Carrinho, Administração, Sobre nós.
+- Na home, faça um carousel de duas páginas, cada uma delas terá 3 produtos. Ao clicar no produto, o usuário será redirecionado para a página de detalhes do mesmo.
+- Seu site tem de ter uma página de detalhes para cada item listado onde haverá uma explicação sobre o mesmo. Ex: A página de uma bolsa teria um título, descrição, imagem, avaliação, etc.
+- Na página de administração, haverá uma lista de produtos e o usuário deve conseguir editar, excluir e criar um novo produto. Dica: você pode utilizar um modal do bootstrap para fazer essas etapas.
+- Na tela do produto, deve ser possível adicioná-lo num carrinho, mas esse carrinho ficará em um estado dentro da contextAPI. Posteriormente, quando o usuário clicar na aba de carrinho, os dados serão buscados da contextAPI e a lista de produtos será listada. (Opcionalmente, esse carrinho pode ser armazenado no local storage através da contextAPI)
+- Não se esqueça de colocar todos os membros da equipe na página de sobre nós.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🧬 Requisitos Infraestrutura
+- A API deverá ser implementada e disponibilizada por meio de um ambiente de cloud computing EC2 da Amazon Web Services.
+- O front-end deverá ser hospedado em um ambiente Vercel.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📖 Referências
+- Comércio eletrônico brasileiro cresce 72,2% no primeiro trimestre de 2021
+Por Roseli Andrion | 02 de Julho de 2021
+https://canaltech.com.br/e-commerce/comercio-eletronico-brasileiro-cresce-722-no-primeiro-trimestre-de-2021-188932/

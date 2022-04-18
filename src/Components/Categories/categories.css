@@ -1,77 +1,159 @@
 .page-category {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url(../../Assets/Home/home-background-02.png);
   background-repeat: no-repeat;
   background-size: cover;
+  color: white;
 }
 
 .container-category {
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 6rem;
 }
 
-.title-category{
+.title-category {
+  margin: 3rem 0 5rem 0;
   font-weight: lighter;
   font-size: 3rem;
 }
 
+.subtitle-category {
+  margin-bottom: 6rem;
+}
+
 .row-category {
-  margin: auto;
+  margin: 0 0 auto 0;
   width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 3rem;
 }
 
 .card-person-category {
-  margin: 5px 5px;
-  padding: 5px 5px;
   transition: all ease 0.3s;
+  height: 300px;
 }
 
 .img-container-category {
-  height: 25vh;
-  margin: 0px;
   border-radius: 3px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   position: relative;
 }
 
-.img-container-category > img {
+.img-container-category>img {
   height: 100%;
   transition: all 0.3s ease-in-out;
 }
 
 .card-person-category:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .card-person-category:hover img {
   filter: none;
 }
 
+.flip-container {
+  width: 250px;
+  height: 200px;
+  perspective: 1000px;
+}
 
-@media (max-width: 575px) {
-  .row-category > div {
-    padding: 0;
-    padding-bottom: 8px;
+.flipper {
+  position: relative;
+  width: 70%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  margin: 0 auto;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+#switch01:hover~.flip-container .flipper {
+  transform: rotateY(180deg);
+}
+
+#switch01 {
+  display: none;
+}
+
+#switch02:hover~.flip-container .flipper {
+  transform: rotateY(180deg);
+}
+
+#switch02 {
+  display: none;
+}
+
+#switch03:hover~.flip-container .flipper {
+  transform: rotateY(180deg);
+}
+
+#switch03 {
+  display: none;
+}
+
+#switch04:hover~.flip-container .flipper {
+  transform: rotateY(180deg);
+}
+
+#switch04 {
+  display: none;
+}
+
+#switch05:hover~.flip-container .flipper {
+  transform: rotateY(180deg);
+}
+
+#switch05 {
+  display: none;
+}
+
+#switch06:hover~.flip-container .flipper {
+  transform: rotateY(180deg);
+}
+
+#switch06 {
+  display: none;
+}
+
+
+
+
+
+@media (max-width: 800px) {
+
+  .title-category {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 0 20px;
   }
-  div > img {
-    width: 90vw;
-  }
-  .img-container-category:hover {
-    width: 100vw;
-  }
+
+}
+
+
+@media (max-width: 670px) {
   
 }

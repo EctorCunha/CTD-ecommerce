@@ -1,17 +1,25 @@
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 .admin_header {
-    height: 150px;
+    height: 100px;
     background-color: rgb(0, 0, 0);
+}
+
+.admin_main {
+    background-image: url(../../Assets/Adm/background_adm.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .admin_body {
     display: flex;
-    flex: 1;
-    min-height: 100vh;
-    background-image: url(../../Assets/Adm/background_adm.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    min-height: 90vh;
+    padding-top: 50px;
 }
 
 
@@ -29,7 +37,7 @@
     max-width: 400px;
     margin: 0px;
     padding: 10px 20px 10px 20px;
-    border-radius: 0 50px 50px 0px;
+    border-radius: 0 10px 10px 0px;
     height: fit-content;
     font-size: 1.3rem;
     color: #fff;
@@ -67,6 +75,7 @@
 }
 
 .admin_container select {
+    background-color: #fff;
     padding: 0 10px;
     height: 35px;
     border: none;
@@ -94,7 +103,7 @@
 }
 
 .admin_container form button {
-    font-size:1.3rem;
+    font-size: 1.3rem;
     height: 50px;
     width: 45%;
     background: #fff;
@@ -102,33 +111,41 @@
     border-radius: 5px;
 }
 
-.admin_container form button:last-child {
+.admin_container form .clean {
     background: transparent;
     border: 1px solid #fff;
     color: #fff;
 }
 
-
+.admin_container button:hover {
+    background-color: #cf4492;
+    transition: all ease 0.5s;
+    border: 3px solid #cf4492;
+    filter: brightness(1.2) drop-shadow(1px 1px 0.5rem #e71bbe);
+    color: #fff;
+}
 
 
 /* PRODUCTS LIST */
 .admin_products {
-    max-width: calc(100% - 400px);
     width: 100%;
+    margin-right: 5px;
 }
 
 .admin_filter {
     height: 80px;
     display: flex;
     align-items: center;
+    align-content: stretch;
     justify-content: space-between;
     padding: 30px;
+
 }
 
 .admin_filter h1 {
     color: #fff;
-    margin: 0 10px 0 0;
-    width: 10%;
+    margin: 0 20px 0 0;
+
 }
 
 .admin_filter label {
@@ -137,24 +154,26 @@
     justify-content: flex-start;
     text-align: right;
     align-items: center;
-    width: 35%;
+
     font-size: 1.2rem;
 }
 
-.admin_filter select{
+.admin_filter select {
     width: 60%;
+    min-width: 140px;
     font-size: 1.2rem;
 }
 
 .admin_filter span {
+    width:40%;
     color: #fff;
     margin: 0 8px;
 }
 
 .admin_filter button {
     height: 35px;
-    width: 160px;
-    margin-left: 5px;
+    width: 170px;
+    margin-left: 15px;
     font-size: 1.2rem;
     border-radius: 5px;
     border: none;
@@ -166,7 +185,7 @@
     display: flex;
     flex: 1;
     flex-direction: column;
-    height: calc(100vh - 170px);
+    height: 660px;
     padding: 5px;
     overflow-y: scroll;
 }
@@ -179,7 +198,7 @@
     align-items: center;
     justify-content: space-between;
     color: #fff;
-    border-radius:5px;
+    border-radius: 5px;
 }
 
 .admin_products h2 {
@@ -215,9 +234,112 @@
     margin: 0 10px 0 30px;
 }
 
+.admin_products_card_buttons .icon:hover {
+    transition: all ease 0.5s;
+    filter: brightness(1.4) drop-shadow(1px 1px 0.5rem #e71bbe);
+}
+
+/*SCROLLBAR*/
+
+.admin_container ::-webkit-scrollbar {
+    width: 7px;
+}
+
+.admin_container ::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 20px;
+}
+
+.admin_container ::-webkit-scrollbar-thumb {
+    background-color: #cf4492;
+    border-radius: 20px;
+
+}
+
+
+/* FOOTER */
+.admin_footer {
+    height: 300px;
+}
+
+
 @media (max-width: 1200px) {
     .admin_filter {
         flex-wrap: wrap;
-
+        height: 150px;
+        padding: 0 15px 10px 15px;
+        flex-grow: 1;    
+        }
+    .admin_filter h1{
+        width:100%;
+        margin: 0 auto 10px auto;
     }
+    .admin_filter label{
+        margin: 0 10px 0 0;
+    }
+    .admin_filter button{
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 910px) {
+    .admin_body {
+        display: flex;
+        flex-direction: column;
+        min-height: 90vh;
+        align-items: center;
+    }
+    
+    .admin_container form {
+        background: #616161a6;
+        width: 90%;
+        max-width: 90%;
+        border-radius: 10px;
+        padding: 15px 40px 15px 40px;
+    }
+
+    .admin_container .form_div label{
+        width: 50%;
+    }
+    .admin_products{
+        width: 90%;
+        align-items: center;
+    }
+
+    .admin_filter {
+        width: 100%;
+        padding: 0;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .admin_products_card li{
+        flex-direction: column;
+        text-align: center
+    }
+    .admin_products_card li img{
+        margin-bottom: 20px;
+    }
+    .admin_products_card_buttons{
+        margin:20px 0 0 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .admin_filter {
+        height: 180px;
+        justify-content:center; 
+        }
+    .admin_filter h1{
+        width:100%;
+        margin: 0 auto 10px auto;
+    }
+    .admin_filter label{
+        margin: 5px 10px;
+    }
+    .admin_filter button{
+        margin: 10px auto;
+    }
+
 }
