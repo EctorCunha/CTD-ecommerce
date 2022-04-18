@@ -1,6 +1,6 @@
 export default async function deleteProduct(id,getProducts,setProducts,clearStates) {
     try {
-      await fetch("http://18.191.177.168:8080/" + id, {
+      await fetch("http://18.191.177.168:8080/products/" + id, {
         method: "DELETE",
       });
       alert("Produto deletado com sucesso");

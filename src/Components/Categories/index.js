@@ -29,12 +29,12 @@ export default function Categories() {
               <label class="flip-container" for="switch01">
                 <div class="flipper">
                   <div class="front">
-                    <img src={um} alt="card um" />
-                    <img className="img_2" id="pink" src={logoHome} />
+                    <img src={colecionavel} alt="card um" />
                   </div>
                   <div class="back">
                     <Link to={"/chooseyourgame/" + 1}>
-                      <img src={colecionavel} alt="card um" />
+                      <img src={um} alt="card um" />
+                      <img className="img_2" id="pink" src={logoHome} />
                     </Link>
                   </div>
                 </div>
@@ -48,12 +48,12 @@ export default function Categories() {
               <label class="flip-container" for="switch02">
                 <div class="flipper">
                   <div class="front">
-                    <img src={dois} alt="card dois" />
-                    <img className="img_2" id="lightBlue" src={logoHome} />
+                    <img src={viagem} alt="card dois" />
                   </div>
                   <div class="back">
                     <Link to={"/chooseyourgame/" + 6}>
-                      <img src={viagem} alt="card dois" />
+                      <img src={dois} alt="card dois" />
+                      <img className="img_2" id="lightBlue" src={logoHome} />
                     </Link>
                   </div>
                 </div>
@@ -67,12 +67,12 @@ export default function Categories() {
               <label class="flip-container" for="switch03">
                 <div class="flipper">
                   <div class="front">
-                    <img src={tres} alt="card tres" />
-                    <img className="img_2" id="red" src={logoHome} />
+                    <img src={cooperativo} alt="card tres" />
                   </div>
                   <div class="back">
                     <Link to={"/chooseyourgame/" + 2}>
-                      <img src={cooperativo} alt="card tres" />
+                      <img src={tres} alt="card tres" />
+                      <img className="img_2" id="red" src={logoHome} />
                     </Link>
                   </div>
                 </div>
@@ -86,12 +86,12 @@ export default function Categories() {
               <label class="flip-container" for="switch04">
                 <div class="flipper">
                   <div class="front">
-                    <img src={quatro} alt="card quatro" />
-                    <img className="img_2" id="orange" src={logoHome} />
+                    <img src={expert} alt="card quatro" />
                   </div>
                   <div class="back">
                     <Link to={"/chooseyourgame/" + 3}>
-                      <img src={expert} alt="card quatro" />
+                      <img src={quatro} alt="card quatro" />
+                      <img className="img_2" id="orange" src={logoHome} />
                     </Link>
                   </div>
                 </div>
@@ -105,12 +105,12 @@ export default function Categories() {
               <label class="flip-container" for="switch05">
                 <div class="flipper">
                   <div class="front">
-                    <img src={cinco} alt="card cinco" />
-                    <img className="img_2" id="green" src={logoHome} />
+                    <img src={party} alt="card cinco" />
                   </div>
                   <div class="back">
                     <Link to={"/chooseyourgame/" + 5}>
-                      <img src={party} alt="card cinco" />
+                      <img src={cinco} alt="card cinco" />
+                      <img className="img_2" id="green" src={logoHome} />
                     </Link>
                   </div>
                 </div>
@@ -124,12 +124,12 @@ export default function Categories() {
               <label class="flip-container" for="switch06">
                 <div class="flipper">
                   <div class="front">
-                    <img src={seis} alt="card seis" />
-                    <img className="img_2" id="darkBlue" src={logoHome} />
+                    <img src={family} alt="card seis" />
                   </div>
                   <div class="back">
                     <Link to={"/chooseyourgame/" + 4}>
-                      <img src={family} alt="card seis" />
+                      <img src={seis} alt="card seis" />
+                      <img className="img_2" id="darkBlue" src={logoHome} />
                     </Link>
                   </div>
                 </div>

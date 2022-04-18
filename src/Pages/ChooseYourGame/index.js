@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from 'react-router-dom';
 import './chooseYourGame.css'
 import filterByCategory from "../../Services/filterByCategory";
+import getCategories from "../../Services/getCategories";
 import icone_jogadores from "../../Assets/Basic/icon-players.svg";
 import icone_tempo from "../../Assets/Basic/icon-clock.svg"
 import icone_age from "../../Assets/Basic/icon-age.svg"
@@ -9,9 +10,11 @@ import icone_age from "../../Assets/Basic/icon-age.svg"
 export default function ChooseYouGame() {
   const parametros = useParams();
   const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     getProducts();
+    getCategories(setCategories);
   }, []);
 
   async function getProducts() {
@@ -27,6 +30,7 @@ export default function ChooseYouGame() {
       <div className='header'></div>
       <div>
         <h1>ESCOLHA SEU JOGO</h1>
+        {categories.filter(category => category.id==parametros.code).map(category => (<h3 className={"category"+category.id}>{("Categoria "+category.name).toUpperCase()}</h3>))} 
         <ul className="product_container">
           {products.map((produtc) =>
           (

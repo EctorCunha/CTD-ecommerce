@@ -1,4 +1,4 @@
-.choose_your_game{
+.all_games{
     width: 100vw;
     color: #fff;
     min-height: 100vh;
@@ -11,100 +11,127 @@
     background-size: contain;
 }
 
-.choose_your_game .header{
+.all_games .header{
     height:130px;
 }
 
-.choose_your_game .footer{
+.all_games .footer{
     height:100px;
 }
 
-.choose_your_game h1{
+.all_games h1{
     margin: 10px 30px 20px 30px;
     font-size:3.6rem;
     font-weight: lighter;
 }
 
-.choose_your_game .product_container{
+.all_games .product_container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding:0 20px;
 }
 
-.choose_your_game .product_card{
+.all_games .product_card{
     border-radius: 5px;
     width: 250px;
     text-align: center;
     margin: 15px 15px;
     padding: 10px;
-    background-color:rgba(27, 27, 27, 0.856);
+    background-color:rgba(63, 63, 63, 0.747);
+    border: 1px solid rgb(110, 110, 110);
     color: #fff;
 }
 
-.choose_your_game .product_card::marker{
+.all_games .product_card::marker{
     color: rgba(163, 87, 87, 0);
 }
 
-.product_container #category1:hover{
+.all_games .product_card:hover .product_category{
+    filter: brightness(2);
+}
+
+.all_games .product_container #category1:hover{
     border: 3px solid #cf4492;
     filter: brightness(1.1) drop-shadow(1px 1px 0.5rem #e71bbe);
 }
-.product_container #category2:hover{
+.all_games .product_container #category1:hover .product_category{
+    color: #cf4492;
+}
+.all_games .product_container #category2:hover{
     border: 3px solid #cf1111;
     filter: brightness(1.1) drop-shadow(1px 1px 0.5rem #cf1111);
 }
-.product_container #category3:hover{
+.all_games .product_container #category2:hover .product_category{
+    color: #cf1111;
+}
+.all_games .product_container #category3:hover{
     border: 3px solid #ce711b;
     filter: brightness(1.1) drop-shadow(1px 1px 0.5rem #ce711b);
 }
-.product_container #category4:hover{
+.all_games .product_container #category3:hover .product_category{
+    color: #ce711b;
+}
+.all_games .product_container #category4:hover{
     border: 3px solid #1e1bce;
     filter: brightness(1.1) drop-shadow(1px 1px 0.5rem #1e1bce);
 }
-.product_container #category5:hover{
+.all_games .product_container #category4:hover .product_category{
+    color: #1e1bce;
+}
+.all_games .product_container #category5:hover{
     border: 3px solid #63ce1b;
     filter: brightness(1.1) drop-shadow(1px 1px 0.5rem #63ce1b);
 }
-.product_container #category6:hover{
+.all_games .product_container #category5:hover .product_category{
+    color: #63ce1b;
+}
+.all_games .product_container #category6:hover{
     border: 3px solid #14da98;
     filter: brightness(1.1) drop-shadow(1px 1px 0.5rem #14da98);
 }
+.all_games .product_container #category6:hover .product_category{
+    color: #14da98;
+}
 
-.product_card:hover{
+.all_games .product_card:hover{
     background-color:rgba(27, 27, 27, 0.699);
     filter: brightness(10);
     transform: scale(1.1);
 }
 
-.choose_your_game .product_card h2{
+.all_games .product_card h2{
     height: 40px;
     margin: 10px 0;
 }
 
 
-.choose_your_game .product_image{
+.all_games .product_image{
     height:220px;
     width: 220px;
     border-radius: 5px;
 }
 
-.choose_your_game .product_infos{
+.all_games .product_infos{
     display: flex;
     margin: 15px 0;
 }
 
-.choose_your_game .product_info{
+.all_games .product_info{
     width:33%;
     margin:0;
 }
 
-.choose_your_game .product_info img{
+.all_games .product_info img{
     height:40px;
     width: 40px;
     margin: 0;
 }
 
+.all_games .product_card .product_category{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
 
 
 a, a:link, a:visited, a:active, a:hover {
