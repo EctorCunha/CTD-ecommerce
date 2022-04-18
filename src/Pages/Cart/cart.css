@@ -201,6 +201,7 @@ button:hover{
   border: 3px solid #cf4492;
   filter: brightness(1.2) drop-shadow(1px 1px 0.5rem #e71bbe);
   transition: all ease 0.5s;
+  border-radius: 50px;
   background: #cf4492;
   color: white;
 }
@@ -218,8 +219,31 @@ button:hover{
   background-color: #cf4492;
   transition: all ease 0.5s;
   border: 3px solid #cf4492;
+  border-radius: 50px;
   filter: brightness(1.2) drop-shadow(1px 1px 0.5rem #e71bbe);
 }
+
+#button_clean{
+  margin: 5px 20px;
+  float: right;
+  background-color: #333;
+  height: 50px;
+  width: 130px;
+  border-radius: 10px;
+  color: white;
+  font-size: 0.8rem;
+  border: 3px solid #555;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+}
+
+#button_clean:hover{
+  background-color: #cf4492;
+  transition: all ease 0.5s;
+  border-radius: 50px;
+  border: 3px solid #cf4492;
+  filter: brightness(1.2) drop-shadow(1px 1px 0.5rem #e71bbe);
+}
+
 
 #button_trash{
   background-color: transparent;
@@ -299,6 +323,11 @@ button:hover{
   width: 130px;
   height: 60px;
 }
+
+#button_clean{
+  width: 130px;
+  height: 40px;
+}
 }
 
 /*RESPONSIVE TABLET*/
@@ -367,7 +396,7 @@ button:hover{
   float: left;
   font-size: 1.5rem;
   text-align: right;
-  margin: 70px 58px;
+  margin: 150px 58px;
 }
   
 .cart_price_info{
@@ -388,6 +417,13 @@ button:hover{
   height: 50px;
 }
 
+#button_clean{
+  width: 110px;
+  height: 50px;
+  margin-top: 20px;
+  float: center;
+}
+
 }
 
 /*RESPONSIVE CELLPHONE*/
@@ -405,7 +441,7 @@ button:hover{
 
 .cart_product{
   width: 250px;
-  height: 200px;
+  height: 150px;
   padding: 0px;
   margin-bottom:15px;
 }
@@ -415,11 +451,11 @@ button:hover{
 }
 
 .cart_empty_container img{
-  width: 100px;
+  width: 75px;
 }
 
 .cart_card_all{
-  height: 200px;
+  height: 100px;
   width: 250px;
   padding: 0 5px 0 0;
 }
@@ -460,7 +496,7 @@ button:hover{
 
 .cart_price{
   width: 230px;
-  height: 145px;
+  height: 130px;
   font-size: 0.9rem;
   padding: 10px;
   margin: 10px 0 0 0;
@@ -468,6 +504,7 @@ button:hover{
   
 .cart_price_info{
   margin-bottom:0px;
+  font-size: 0.7rem;
 }
 
 .cart_price_button{
@@ -490,11 +527,21 @@ button:hover{
 
 #button_back{
   width: 90px;
+  font-size: 0.6rem;
 }
 
 #button_finish{
   width: 90px; 
   padding: 3px 15px;
+  font-size: 0.6rem;
+
+}
+
+#button_clean{
+  width: 90px;
+  height: 30px;
+  float: none;
+  font-size: 0.5rem;
 }
 
 }

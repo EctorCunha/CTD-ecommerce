@@ -4,10 +4,11 @@ import React, { useContext } from "react"
 import { CartContext } from "../../Context/cart"
 import emptyCart from "../../Assets/Cart/icon-cart-empty.svg"
 import { FiTrash } from "react-icons/fi";
+import { HashLink} from 'react-router-hash-link';
 
 
 export default function Cart() {
-    const { productsCart, addProducToCart, removeProductsCart, deleteProductsCart } = useContext(CartContext);
+    const { productsCart, addProducToCart, removeProductsCart, deleteProductsCart, cleanList } = useContext(CartContext);
 
     let subtotal = 0;
     productsCart.map((product) => (subtotal += (product.price * product.qtd)))
@@ -18,6 +19,13 @@ export default function Cart() {
 
     let total = (subtotal + (subtotal * 0.1)).toLocaleString('pt-BR', { maximumFractionDigits: 2, minimumFractionDigits: 2 });
 
+    function finallyCart(){
+        if(productsCart.length>0){
+            return "/cart/finish"
+        } else{
+            return "/cart"
+        }
+    }
 
     return (
         <>
@@ -83,6 +91,7 @@ export default function Cart() {
                                     </div>
                                     : <div></div>}
                             </div>
+                            <button id="button_clean" onClick={cleanList}> LIMPAR LISTA</button>
                         </div>
 
                         <div className='cart_price'>
@@ -97,8 +106,8 @@ export default function Cart() {
                                 <p>TOTAL:</p><p>{total}</p>
                             </div>
                             <div className='cart_price_button'>
-                                <Link to={'/'}><button id='button_back'>VOLTAR AO CATÁLOGO</button></Link>
-                                <Link to={'/cart/finish'}><button id='button_finish'>FINALIZAR PEDIDO</button></Link>
+                             <HashLink to={"/allgames"}><button id='button_back'>ADICIONAR JOGO</button></HashLink>
+                             <Link to={finallyCart()}><button id='button_finish' onClick={cleanList}>FINALIZAR PEDIDO</button></Link>
                             </div>
                         </div>
                     </div>

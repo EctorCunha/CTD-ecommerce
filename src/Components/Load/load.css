@@ -6,8 +6,8 @@
 
 .preload{
     background-size: cover;
-    background-position-y: center;
-    background-image: url(../../Assets/preload.gif);
+    background-position: center center;
+    background-image: url(../../Assets/Gif/loading.gif);
     width: 100vw;
     height: 100vh;
 }
@@ -25,3 +25,10 @@
         filter: drop-shadow(3px 3px 6px #8ec7d4);
     }
 } */
+
+@media(max-width: 770px) {
+    .preload {
+      background-image: url(../../Assets/Gif/loading_small.gif);
+    }
+  }
+  
