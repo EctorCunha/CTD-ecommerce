@@ -53,6 +53,10 @@ export default function Header() {
               <li>CATEGORIAS</li>
             </HashLink>
             <span>|</span>
+            <Link to={"/allgames"}>
+              <li>TODOS JOGOS</li>
+            </Link>
+            <span>|</span>
             <Link to={"/about"}>
               <li>SOBRE NÓS</li>
             </Link>
