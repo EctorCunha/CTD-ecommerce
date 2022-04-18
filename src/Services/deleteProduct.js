@@ -3,7 +3,7 @@ export default async function deleteProduct(id,getProducts,setProducts,clearStat
       await fetch("http://18.191.177.168:8080/" + id, {
         method: "DELETE",
       });
-      alert("Deletado com sucesso");
+      alert("Produto deletado com sucesso");
       getProducts(setProducts,clearStates);
     } catch (error) {
       alert("Erro ao deletar");
