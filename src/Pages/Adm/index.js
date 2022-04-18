@@ -247,7 +247,7 @@ export default function Adm() {
                   <h2>{produtc.title}</h2>
                   <p>{produtc.description}</p>
                   <div className="admin_products_info">
-                    {categories.filter(category => category.id==produtc.id).map(category => (<p>Category: {category.name}</p>))} 
+                    {categories.filter(category => category.id==produtc.category_id).map(category => (<p>Categoria: {category.name}</p>))} 
                     <p>Min-jogadores: {produtc.minimumPlayersNumber}</p>
                     <p>Max-jogadores: {produtc.maximumPlayersNumber}</p>
                     <p>Idade: {produtc.minimumAge}+</p>

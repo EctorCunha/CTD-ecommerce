@@ -30,7 +30,8 @@
 }
 
 .row-category {
-  margin: 0 0 auto 0;
+  margin: 0 0px auto 0px;
+  padding: 0 30px;
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -68,8 +69,8 @@
 .img-container-category .img_2{
   width: 130px;
   position: absolute;
-  margin-left:-150px;
-  margin-top:80px;
+  margin-left:-152px;
+  margin-top:85px;
   filter: brightness(1.3);
 }
 .img-container-category #lightBlue{
@@ -89,14 +90,14 @@
 }
 
 .flip-container {
-  width: 250px;
+  width: 200px;
   height: 200px;
   perspective: 1000px;
 }
 
 .flipper {
   position: relative;
-  width: 70%;
+  width: 90%;
   transition: transform 0.8s;
   transform-style: preserve-3d;
   margin: 0 auto;

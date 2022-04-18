@@ -2,15 +2,18 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from 'react-router-dom';
 import './allGames.css'
 import getProducts from "../../Services/getProducts";
+import getCategories from "../../Services/getCategories";
 import icone_jogadores from "../../Assets/Basic/icon-players.svg";
 import icone_tempo from "../../Assets/Basic/icon-clock.svg"
 import icone_age from "../../Assets/Basic/icon-age.svg"
 
 export default function AllGames() {
   const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     getAllProducts();
+    getCategories(setCategories);
   }, []);
 
   function clearStates(){}
@@ -24,7 +27,7 @@ export default function AllGames() {
   }
 
   return (
-    <section className='choose_your_game'>
+    <section className='all_games'>
       <div className='header'></div>
       <div>
         <h1>ESCOLHA SEU JOGO</h1>
@@ -50,6 +53,7 @@ export default function AllGames() {
                     <p>{produtc.minimumAge} anos</p>
                   </div>
                 </div>
+                {categories.filter(category => category.id==produtc.category_id).map(category => (<p className="product_category">Categoria: {category.name}</p>))} 
               </div>
             </li>
             </Link>
