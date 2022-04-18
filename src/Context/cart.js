@@ -27,13 +27,10 @@ export default function CartProvider({ children }) {
     if(item.length > 0) {
       if (item[0].qtd > 1) {
         item[0].qtd = item[0].qtd - 1;
-      } else {
-      const arrayFilter = copyProductsCart.filter((product) => product.id !== id);
-      setProductsCart(arrayFilter);
-    }} else{
+        setProductsCart(copyProductsCart);
+      } } else{
       alert("Produto não encontrado")
     }
-      setProductsCart(copyProductsCart);
   }
 
   function deleteProductsCart(id){
@@ -53,8 +50,12 @@ export default function CartProvider({ children }) {
     setProductsCart(arrayFilter);
   }
 
+  function cleanList(){
+      setProductsCart([]);
+  }
+
   return (
-    <CartContext.Provider value={{ productsCart, addProducToCart, removeProductsCart, deleteProductsCart }}>
+    <CartContext.Provider value={{ productsCart, addProducToCart, removeProductsCart, deleteProductsCart, cleanList}}>
       {children}
     </CartContext.Provider>
   );

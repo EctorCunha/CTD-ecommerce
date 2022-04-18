@@ -4,15 +4,16 @@
   background-image: url(../../Assets/Gif/error404.gif);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: center;
+  background-position: center center;
 }
+
 /* 
 .body {
   display: flex;
   justify-content: center;
 }
- */
-/* .error {
+
+.error {
   margin: 458px 0 0 112px;
   font-size: 59px;
   font-weight: 400;
@@ -23,3 +24,9 @@
   color: #ffffff;
   text-shadow: 3px 3px 7px rgba(187, 187, 187, 0.76);
 } */
+
+@media(max-width: 770px) {
+  .page-error {
+    background-image: url(../../Assets/Gif/error404_small.gif);
+  }
+}
