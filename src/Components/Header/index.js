@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
-import { HashLink} from 'react-router-hash-link';
-import { useState, useEffect} from "react";
+import { HashLink } from 'react-router-hash-link';
+import React, { useState, useEffect, useContext } from "react";
+import { CartContext } from "../../Context/cart"
 import "./header.css";
 import logo_header from "../../Assets/Header/logo-header.png";
 import icon_cart from "../../Assets/Basic/icon-cart.svg";
@@ -12,6 +13,9 @@ export default function Header() {
   const [password, setPassword] = useState("");
   const [color, setColor] = useState("");
   const sampleLocation = useLocation();
+  const { productsCart } = useContext(CartContext);
+
+  let itensCart = productsCart.length
 
   function openModal() {
     const modal = document.querySelector(".modal");
@@ -26,23 +30,23 @@ export default function Header() {
   }
 
   useEffect(() => {
-    if(sampleLocation.pathname.includes("chooseyourgame")|| sampleLocation.pathname.includes("aboutyourgame")){
+    if (sampleLocation.pathname.includes("chooseyourgame") || sampleLocation.pathname.includes("aboutyourgame")) {
       setColor("white");
-    } else{
+    } else {
       setColor("pink");
     }
-  }, [sampleLocation]); 
+  }, [sampleLocation]);
 
 
-  function route(){
-    if(user=="adm" && password=="1234"){
+  function route() {
+    if (user == "adm" && password == "1234") {
       return "/adm";
     } else {
       return "/accessrestricted";
     }
   }
 
-  
+
 
   return (
     <header>
@@ -77,17 +81,22 @@ export default function Header() {
         </nav>
       </div>
       <div className="icons-header">
-        <Link to={"/cart"}>
-          <img
-            id={color}
-            width="40"
-            height="40"
-            viewBox="0 0 40 40"
-            className="icon_cart"
-            src={icon_cart}
-            alt="icon_cart"
-          />
-        </Link>
+        <div className="icon-cart-item">
+          <Link to={"/cart"}>
+            <img
+              id={color}
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              className="icon_cart"
+              src={icon_cart}
+              alt="icon_cart"
+            />
+            {(productsCart.length > 0) ?
+              <div className="icon-item">{itensCart}</div>
+              : <div></div>}
+          </Link>
+        </div>
         <img
           id={color}
           width="40"
