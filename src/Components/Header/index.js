@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { HashLink} from 'react-router-hash-link';
-import { useState} from "react";
+import { useState, useEffect} from "react";
 import "./header.css";
 import logo_header from "../../Assets/Header/logo-header.png";
 import icon_cart from "../../Assets/Basic/icon-cart.svg";
@@ -10,6 +10,8 @@ export default function Header() {
 
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
+  const [color, setColor] = useState("");
+  const sampleLocation = useLocation();
 
   function openModal() {
     const modal = document.querySelector(".modal");
@@ -23,6 +25,15 @@ export default function Header() {
     document.getElementById(id).scrollIntoView();
   }
 
+  useEffect(() => {
+    if(sampleLocation.pathname.includes("chooseyourgame")|| sampleLocation.pathname.includes("aboutyourgame")){
+      setColor("white");
+    } else{
+      setColor("pink");
+    }
+  }, [sampleLocation]); 
+
+
   function route(){
     if(user=="adm" && password=="1234"){
       return "/adm";
@@ -31,11 +42,13 @@ export default function Header() {
     }
   }
 
+  
+
   return (
     <header>
       <Link to={"/"}>
         <div className="logo-header">
-          <img src={logo_header} alt="Logo Game Night Home" />
+          <img id={color} src={logo_header} alt="Logo Game Night Home" />
         </div>
       </Link>
       <div className="menu-header">
@@ -66,6 +79,7 @@ export default function Header() {
       <div className="icons-header">
         <Link to={"/cart"}>
           <img
+            id={color}
             width="40"
             height="40"
             viewBox="0 0 40 40"
@@ -75,6 +89,7 @@ export default function Header() {
           />
         </Link>
         <img
+          id={color}
           width="40"
           height="40"
           viewBox="0 0 40 40"

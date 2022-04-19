@@ -20,8 +20,14 @@ header > * {
   margin: 10px 0 0 5px;
 }
 
-.logo-header:hover {
+header #pink:hover{
   filter: brightness(1.2) drop-shadow(1px 1px 10px #e71bbe);
+}
+header #white{
+  filter: brightness(3) saturate(0%);
+}
+header #white:hover{
+  filter: brightness(5) saturate(0%);
 }
 
 .menu-header {
