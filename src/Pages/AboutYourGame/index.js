@@ -27,6 +27,7 @@ export default function AboutYourGame() {
 
   return (
     <section className="about_your_game" id={"about_your_game" + product.category_id}>
+      <div className="header"></div>
       <div>
         <h1 className="title-about-your-game">SOBRE SEU JOGO</h1>
       </div>
@@ -44,7 +45,7 @@ export default function AboutYourGame() {
             <div className="price">
               <span>R$ {product.price}</span>
               <Link to={"/cart"}>
-                <button className="btn" onClick={() => addProducToCart(product.id, product.title, product.minimumAge, product.language, product.price, product.image)}>COMPRAR!</button>
+                <button className="btn" id={"category"+product.category_id} onClick={() => addProducToCart(product.id, product.title, product.minimumAge, product.language, product.price, product.image)}>COMPRAR!</button>
               </Link>
             </div>
           </div>
@@ -65,6 +66,7 @@ export default function AboutYourGame() {
           </div>
         </div>
       </div>
+      <div className="footer"></div>
     </section>
   );
 }

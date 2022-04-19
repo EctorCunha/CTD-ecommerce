@@ -8,6 +8,7 @@
     scroll-behavior: smooth;
     width: 100vw;
     min-height: 100vh;
+
 }
 
 #about_your_game1{
@@ -29,10 +30,14 @@
     background-image: url(../../Assets/Category/category_background_lightblue.svg);
 }
 
+.about_your_game .header{
+    height:130px;
+}
+
 .title-about-your-game{
-    font-size: 3.6rem;
+    font-size: 3rem;
     font-weight: lighter;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .about_your_game .game{
@@ -40,13 +45,14 @@
     justify-content: center;
     align-items: center;
     width: 60vw;
-    height: 45vh;
+    min-height: 50vh;
     gap: 2rem;
+    padding: 0 30px;
 }
 
 .about_your_game .game-image img{
-    height: 45vh;
-    width: 45vh;
+    height: 50vh;
+    width: 50vh;
     margin-left: -10px;
     margin-bottom: -5px;
     border-radius: 10px;
@@ -54,7 +60,7 @@
 
 .about_your_game .game_container{
     display: flex;
-    height: 45vh;
+    height: 50vh;
     border-radius: 10px;
     background-color:#0000007c;
 }
@@ -90,6 +96,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: justify;
 }
 
 .about_your_game .game-info h2{
@@ -123,12 +130,50 @@
     font-family: 'Zen Kurenaido', sans-serif;
 }
 
+.about_your_game .price .btn:hover{
+    transition: all ease 0.5s;
+    color: #fff;
+}
+
+.about_your_game .price #category1:hover{
+    background-color: #cf4492;
+    border: 3px solid #cf4492;
+    filter: brightness(1.2) drop-shadow(1px 1px 0.5rem #e71bbe);
+}
+.about_your_game .price #category2:hover{
+    background-color: #cf1111;
+    border: 3px solid #cf1111;
+    filter: brightness(1.2) drop-shadow(1px 1px 0.5rem #cf1111);
+}
+.about_your_game .price #category3:hover{
+    background-color: #ce721b;
+    border: 3px solid #ce721b;
+    filter: brightness(1.2) drop-shadow(1px 1px 0.5rem #ce721b);
+}
+.about_your_game .price #category4:hover{
+    background-color: #1e1bce;
+    border: 3px solid #1e1bce;
+    filter: brightness(1.2) drop-shadow(1px 1px 0.5rem #1e1bce);
+}
+.about_your_game .price #category5:hover{
+    background-color: #63ce1b;
+    border: 3px solid #63ce1b;
+    filter: brightness(1.2) drop-shadow(1px 1px 0.5rem #63ce1b);
+}
+.about_your_game .price #category6:hover{
+    background-color: #14da98;
+    border: 3px solid #14da98;
+    filter: brightness(1.2) drop-shadow(1px 1px 0.5rem #14da98);
+}
+
+
 .about_your_game .product_infos{
     width: 10vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 10px;
 }
 
 .about_your_game .product_info{
@@ -137,10 +182,101 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align:center;
 }
 
 .about_your_game .product_info img{
     height:60px;
     width: 60px;
     margin: 0;
+}
+
+.about_your_game .footer{
+    height:100px;
+}
+
+@media (max-width: 1000px) {
+    .about_your_game .game{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .about_your_game .game-image img{
+        height: 40vh;
+        width: 40vh;
+    }
+    .about_your_game .game_container{
+        height: 60vh;
+    }
+}
+
+@media (max-width: 840px) {
+    .about_your_game{
+        justify-content: flex-start;
+    }
+    .about_your_game .game{
+        flex-direction: column;
+        align-items: center;
+    }
+    .about_your_game .game-image img{
+        height: 50vh;
+        width: 50vh;
+    }
+    .about_your_game .game_container{
+        width: 70vw;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 2vh 2vh;
+    }
+    .about_your_game .game-info{
+        width: 95%;
+        align-items: center;
+    }
+
+    .about_your_game .product_infos{
+        margin: 5px auto;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .about_your_game .product_info{
+        margin: 5px 20px;
+    }
+    .about_your_game .price{
+        width: 100%;
+        justify-content:space-around;
+        align-items: center;
+        gap: 1.5rem;
+        height:80px;
+    }
+    
+    .about_your_game .price > span {
+        width: 50%;
+        text-align: center;
+    }
+    
+    .about_your_game .price .btn {
+        width: 25vh;
+        padding: 3px 0;
+        border-radius: 5px;
+        border: none;
+        font-size: 1.7rem;
+        color: rgb(10, 10, 10); 
+        font-weight: bold;
+        font-family: 'Zen Kurenaido', sans-serif;
+    }
+
+}
+
+@media (max-width: 575px) {
+    .about_your_game .game_container{
+        width: 85vw;
+    }
+    .about_your_game .price{
+        flex-direction: column;
+        margin: 5px 0;
+    }
+    .about_your_game .price > span {
+        width: 100%;
+    }
 }
