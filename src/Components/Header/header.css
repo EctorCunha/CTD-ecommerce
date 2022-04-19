@@ -65,6 +65,7 @@ header #white:hover{
 }
 
 .icons-header {
+  display: flex;
   margin: auto 0;
   align-items: center;
 }
@@ -75,18 +76,42 @@ header #white:hover{
   cursor: pointer;
 }
 
+.icon-cart-item{
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .icon_cart {
   margin-right: 1.2rem;
   cursor: pointer;
+  position: relative;
+  top: 0px;
+  left: 0px;
 }
 
 .icon_cart:hover {
   filter: brightness(1.4) drop-shadow(1px 1px 10px #e71bbe);
 }
 
+.icon-item{
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color:#e71bbe;
+  color: white;
+  font-size: 0.8rem;
+  border-radius:50px;
+  position: absolute;
+  top: 40px;
+  right: 90px;
+}
+
 .icon_adm {
   margin-right: 1.2rem;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .icon_adm:hover {
