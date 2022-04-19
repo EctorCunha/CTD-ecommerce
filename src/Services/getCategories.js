@@ -1,7 +1,7 @@
 export default async function getCategories(setCategories) {
 
   try {
-    const categories = await fetch(" http://18.191.177.168:8080/categories")
+    const categories = await fetch(" http://18.189.31.114:8080/categories")
       .then((response) => response.json());
     setCategories(categories);
   } catch (error) {
