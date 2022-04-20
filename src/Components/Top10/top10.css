@@ -42,6 +42,24 @@
 .react-multi-carousel-list{
   width: 90vw;
   height: 60vh;
+  padding: 0px 20px;
+}
+
+.react-multiple-carousel__arrow{
+  background-color: #cf449398 !important;
+  
+}
+.react-multiple-carousel__arrow::before{
+  color: #ffffff !important;
+  font-weight:bolder;
+}
+
+.react-multiple-carousel__arrow:hover{
+  background-color: #cf4492 !important;
+  filter: brightness(1.2) drop-shadow(1px 1px 10px #e71bbe);
+}
+.react-multiple-carousel__arrow:hover .react-multiple-carousel__arrow::before{
+  color: #ffffff;
 }
 
 .top10_card{
