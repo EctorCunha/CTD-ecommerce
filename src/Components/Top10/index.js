@@ -56,19 +56,19 @@ export default function Top10() {
           (
             <Link to={'/aboutyourgame/' + product.id}>
               <div className="top10_card">
-                <img src={product.image}></img>
+                <img src={product.image} alt='imagem'></img>
                 <h2>{product.title}</h2>
                 <div className="product_infos">
                   <div className="product_info">
-                    <img src={icone_jogadores}></img>
+                    <img src={icone_jogadores} alt='icone'></img>
                     <p>{product.minimumPlayersNumber} - {product.maximumPlayersNumber}</p>
                   </div>
                   <div className="product_info">
-                    <img src={icone_tempo}></img>
+                    <img src={icone_tempo} alt='icone'></img>
                     <p>{product.playingTime} min</p>
                   </div>
                   <div className="product_info">
-                    <img src={icone_age}></img>
+                    <img src={icone_age} alt='icone'></img>
                     <p>{product.minimumAge} anos</p>
                   </div>
                 </div>
