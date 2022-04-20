@@ -66,6 +66,7 @@ export default function CartProvider({ children }) {
   }
 
   function cleanList(){
+      setProductsCart([]);
       localStorage.clear();
   }
 
