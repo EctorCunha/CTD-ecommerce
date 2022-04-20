@@ -1,4 +1,4 @@
-header {
+header{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,6 +32,7 @@ header #white:hover{
 
 .menu-header {
   margin: auto 0;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -165,4 +166,161 @@ header #white:hover{
 .form-button:hover {
   background: #cf4492;
   filter: drop-shadow(1px 1px 0.5rem #e71bbe);
+}
+
+.menu-section{
+  width:100%;
+}
+
+@media (max-width: 1010px){
+  header{
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 910px){
+  header{
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 770px){
+ 
+   .menu-section nav{
+    display: flex;
+  }
+
+  header{
+    font-size: 0;
+  }
+
+  .logo-header{
+    width: 100px;
+    margin: 10px 10px 0 5px;
+  }
+
+  .menu-section.on li{
+    margin-bottom: 10px;
+    padding: 20px;
+  }
+
+  .one,
+  .two,
+  .three{
+    background-color:#ffffff;
+    height: 5px;
+    width: 40px;
+    margin: 6px auto;
+    transition-duration: 0.3s;
+    border-radius: 20px;
+  }
+  .menu-toggle{
+    width: 500px;
+    height: 30px;
+    margin-left: 170px;
+  }
+
+  .menu-section.on {
+    width: 100vw;
+    height: 450px;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-section.on nav{
+    display: block;
+  }
+  
+  .menu-section.on .menu-toggle{
+    position: absolute;
+    right: 25px;
+    top: 25px;
+  }
+  
+  .menu-section.on .menu-toggle .one{
+    transform: rotate(45deg) translate(7px, 7px);
+    background-color: white;
+    margin-right: 20px;
+  }
+
+  .menu-section.on .menu-toggle .two{
+   opacity: 0;
+  }
+
+  .menu-section.on .menu-toggle .three{
+    transform: rotate(-45deg) translate(8px, -9px);
+    background-color: #fff;
+    margin-right: 20px;
+  }
+
+  .menu-section.on nav ul{
+    text-align: center;
+    display: block;
+  }
+
+  .menu-section.on nav ul a{ 
+   transition-duration:  0.5s;
+   font-size: 1.5rem;
+    display: block;
+    color: #fff;
+  }
+  
+  .menu-section.on nav ul .hide{ 
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 0rem;
+     font-size: 1.6rem;
+  }
+
+  .icon-item{
+    display:none;
+  }
+}
+
+@media (max-width: 320px){
+ 
+ .logo-header{
+   display: none;
+ }
+
+ .one,
+ .two,
+ .three{
+   height: 3px;
+   width: 30px;
+ }
+
+ .menu-section.on .menu-toggle .one{
+  transform: rotate(45deg) translate(7px, 5px);
+}
+
+.menu-section.on .menu-toggle .three{
+  transform: rotate(-45deg) translate(8px, -6px);
+}
+
+ .menu-section.on li{
+   margin-bottom: 5px;
+   padding: 0px;
+ }
+
+ .menu-toggle{
+  margin: 0 150px 0 190px;
+}
+
+ .menu-section.on .menu-toggle .one{
+   margin-right: 80px;
+ }
+
+ .menu-section.on .menu-toggle .three{
+  margin-right: 80px;
+ }
+
+ .menu-section.on {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+}
 }

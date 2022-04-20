@@ -39,6 +39,10 @@
   margin-top: -9px;
 }
 
+.logoHome:hover {
+  filter: brightness(1.2) drop-shadow(1px 1px 5px #e71bbe);
+}
+
 .imgHome{
   background-image: url(../../Assets/Home/home-photo.png);
   background-repeat: no-repeat;
@@ -50,6 +54,11 @@
   border-radius: 10px;
   
 }
+
+.imgHome:hover {
+  filter: brightness(1.4) drop-shadow(1px 1px 15px #00998a);
+}
+
 
 .imgHome_effect {
   width: 100%;
@@ -103,3 +112,10 @@
     width: 70%;
   }
   }
+
+  @media (max-width: 320px) {
+  .changing_text {
+    font-size: 1rem;
+    margin: 5px 10px;
+  }
+}
