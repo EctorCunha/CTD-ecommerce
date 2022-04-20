@@ -17,7 +17,7 @@
 }
 
 .cart_title{
-  font-size: 2.5rem;
+  font-size: 3rem;
   text-align: center;
   margin-bottom: 50px;
 }
@@ -201,7 +201,6 @@ button:hover{
   border: 3px solid #cf4492;
   filter: brightness(1.2) drop-shadow(1px 1px 0.5rem #e71bbe);
   transition: all ease 0.5s;
-  border-radius: 50px;
   background: #cf4492;
   color: white;
 }
@@ -219,7 +218,6 @@ button:hover{
   background-color: #cf4492;
   transition: all ease 0.5s;
   border: 3px solid #cf4492;
-  border-radius: 50px;
   filter: brightness(1.2) drop-shadow(1px 1px 0.5rem #e71bbe);
 }
 
@@ -239,17 +237,14 @@ button:hover{
 #button_clean:hover{
   background-color: #cf4492;
   transition: all ease 0.5s;
-  border-radius: 50px;
   border: 3px solid #cf4492;
   filter: brightness(1.2) drop-shadow(1px 1px 0.5rem #e71bbe);
 }
-
 
 #button_trash{
   background-color: transparent;
   border: none;
 }
-
 
 /*SCROLLBAR*/
 
@@ -273,7 +268,7 @@ button:hover{
 @media(max-width: 1280px) {
  
 .cart_title{
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 
 .cart_attribute{

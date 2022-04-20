@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 export const CartContext = createContext();
 
@@ -17,7 +17,19 @@ export default function CartProvider({ children }) {
     }
 
     setProductsCart(copyProductsCart);
+
+    localStorage.setItem("@game_night"+id, JSON.stringify(copyProductsCart));
+
   }
+  
+  useEffect(() => {
+    const productsStorage = localStorage.getItem("@game_night");
+
+    if (productsStorage) {
+      const tempProducts = JSON.parse(productsStorage);
+      setProductsCart(tempProducts);
+    }
+  }, []);
 
   function removeProductsCart(id){
     const copyProductsCart = [...productsCart];
@@ -48,10 +60,11 @@ export default function CartProvider({ children }) {
       alert("Produto não encontrado")
     }
     setProductsCart(arrayFilter);
+    localStorage.removeItem("@game_night"+id);
   }
 
   function cleanList(){
-      setProductsCart([]);
+      localStorage.clear();
   }
 
   return (
