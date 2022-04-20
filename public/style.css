@@ -2,8 +2,9 @@
 
 * {
   font-family: "Zen Kurenaido", sans-serif;
+  scroll-behavior: smooth;
 }
 
-body{
+body {
   overflow-x: hidden;
 }

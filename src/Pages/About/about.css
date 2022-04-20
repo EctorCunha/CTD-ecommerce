@@ -9,9 +9,9 @@
   flex-direction: column;
 }
 
-.about_header{
+.about_header {
   width: 100vw;
-  height: 100px
+  height: 100px;
 }
 
 .container {
@@ -22,7 +22,7 @@
 }
 
 .about-title {
-  margin: 10vh auto 5vh;
+  margin: 15vh auto 5vh;
   text-transform: uppercase;
   font-size: 3rem;
 }
