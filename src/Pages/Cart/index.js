@@ -4,7 +4,7 @@ import React, { useContext } from "react"
 import { CartContext } from "../../Context/cart"
 import emptyCart from "../../Assets/Cart/icon-cart-empty.svg"
 import { FiTrash } from "react-icons/fi";
-import { HashLink} from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 
 
 export default function Cart() {
@@ -19,10 +19,10 @@ export default function Cart() {
 
     let total = (subtotal + (subtotal * 0.1)).toLocaleString('pt-BR', { maximumFractionDigits: 2, minimumFractionDigits: 2 });
 
-    function finallyCart(){
-        if(productsCart.length>0){
+    function finallyCart() {
+        if (productsCart.length > 0) {
             return "/cart/finish"
-        } else{
+        } else {
             return "/cart"
         }
     }
@@ -31,7 +31,7 @@ export default function Cart() {
         <>
             <main className='cart_container' >
                 <div className='cart_body'>
-                    <h1 className='cart_title'>SEU CARRINHO</h1>
+                    <h1 className='cart_title'>CARRINHO</h1>
                     <div className='cart_info'>
                         <div className='cart_product'>
                             <div className='cart_attribute'>
@@ -78,7 +78,7 @@ export default function Cart() {
                                                             </div>
                                                         </div>
                                                         <div className='cart_unit_price'><p>{((product.price) * (product.qtd)).toLocaleString('pt-BR', { maximumFractionDigits: 2, minimumFractionDigits: 2 })}</p></div>
-                                                        <button id='button_delete'><FiTrash size={20} color="#cf4492" onClick={() => deleteProductsCart(product.id)}/></button>
+                                                        <button id='button_delete'><FiTrash size={20} color="#cf4492" onClick={() => deleteProductsCart(product.id)} /></button>
                                                     </div>
                                                 </div>
                                             </li>
@@ -106,8 +106,8 @@ export default function Cart() {
                                 <p>TOTAL:</p><p>{total}</p>
                             </div>
                             <div className='cart_price_button'>
-                             <HashLink to={"/allgames"}><button id='button_back'>ADICIONAR JOGO</button></HashLink>
-                             <Link to={finallyCart()}><button id='button_finish' onClick={cleanList}>FINALIZAR PEDIDO</button></Link>
+                                <HashLink to={"/allgames"}><button id='button_back'>ADICIONAR JOGO</button></HashLink>
+                                <Link to={finallyCart()}><button id='button_finish' onClick={cleanList}>FINALIZAR PEDIDO</button></Link>
                             </div>
                         </div>
                     </div>
