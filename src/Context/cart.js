@@ -18,7 +18,7 @@ export default function CartProvider({ children }) {
 
     setProductsCart(copyProductsCart);
 
-    localStorage.setItem("@game_night"+id, JSON.stringify(copyProductsCart));
+    localStorage.setItem("@game_night", JSON.stringify(copyProductsCart));
 
   }
   
@@ -60,7 +60,9 @@ export default function CartProvider({ children }) {
       alert("Produto não encontrado")
     }
     setProductsCart(arrayFilter);
-    localStorage.removeItem("@game_night"+id);
+
+    localStorage.setItem("@game_night", JSON.stringify(arrayFilter));
+
   }
 
   function cleanList(){
