@@ -10,6 +10,7 @@ import logo_linkedin from "../../Assets/About/linkedin.png";
 export default function About() {
   return (
     <main className="page">
+      <div className="about_header"></div>
       <div className="container">
         <h1 className="about-title">Sobre Nós</h1>
         <div className="row-cards">

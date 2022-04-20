@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { CartContext } from "../../Context/cart";
 import "./aboutYourGame.css";
 import getProductById from "../../Services/getProductById";
+import getCategories from "../../Services/getCategories";
 import icone_jogadores from "../../Assets/Basic/icon-players.svg";
 import icone_tempo from "../../Assets/Basic/icon-clock.svg"
 import icone_age from "../../Assets/Basic/icon-age.svg"
@@ -10,11 +11,12 @@ import icone_age from "../../Assets/Basic/icon-age.svg"
 export default function AboutYourGame() {
   const parametros = useParams();
   const [product, setProduct] = useState({});
+  const [categories, setCategories] = useState([]);
   const { addProducToCart, removeProductsCart } = useContext(CartContext);
-  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     getProduct();
+    getCategories(setCategories);
   }, []);
 
   async function getProduct() {
@@ -40,10 +42,14 @@ export default function AboutYourGame() {
 
         <div className="game_container" id={"game_container" + product.category_id}>
           <div className="game-info">
-            <h2>{product.title}</h2>
+            <div className="game_titulos">
+              <h2>{product.title}</h2>
+              {categories.filter(category => category.id==product.category_id).map(category => (<p className="category_text" id={"category_text"+category.id}>Categoria: {category.name}</p>))}
+            </div>
+            
             <p>{product.description}</p>
             <div className="price">
-              <span>R$ {product.price}</span>
+              <span>R$ {(product.price ? product.price.toFixed(2).replace(".",",") : "-")}</span>
               <Link to={"/cart"}>
                 <button className="btn" id={"category"+product.category_id} onClick={() => addProducToCart(product.id, product.title, product.minimumAge, product.language, product.price, product.image)}>COMPRAR!</button>
               </Link>

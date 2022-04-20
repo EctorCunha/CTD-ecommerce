@@ -58,6 +58,10 @@
     border-radius: 10px;
 }
 
+.about_your_game .game-image img:hover{
+    filter: brightness(1.2);
+}
+
 .about_your_game .game_container{
     display: flex;
     height: 50vh;
@@ -99,14 +103,44 @@
     text-align: justify;
 }
 
+.about_your_game .game_titulos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .about_your_game .game-info h2{
     font-size: 1.8rem;
 }
 
 .about_your_game .game-info p{
-    margin: 30px 0;
+    margin: 20px 0 5px 0;
     font-size: 1.3rem;
 }
+
+.about_your_game .game-info .category_text{
+    margin: 5px 0;
+    filter: brightness(1.2);
+}
+.about_your_game .game-info #category_text1{
+    color: #fd79e7;
+}
+.about_your_game .game-info #category_text2{
+    color: #fd6e6e;
+}
+.about_your_game .game-info #category_text3{
+    color: #ff9634;
+}
+.about_your_game .game-info #category_text4{
+    color: #7875fd;
+}
+.about_your_game .game-info #category_text5{
+    color: #99ff56;
+}
+.about_your_game .game-info #category_text6{
+    color: #66ffcc;
+}
+
 
 .about_your_game .price{
     display: flex;

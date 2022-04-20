@@ -28,8 +28,6 @@ export default function Adm() {
   const [playingTime, setPlayingTime] = useState("");
   const [category_id, setCategoryId] = useState("");
 
-  const [category,setCategory] = useState({});
-
   const [category_id_filter, setCategoryIdFilter] = useState("");
   const [max_price, setMaxPrice] = useState("");
 
@@ -242,12 +240,12 @@ export default function Adm() {
             {products.map((produtc) => 
             (
               <li>
-                <img className="admin_products_image" src={produtc.image}></img>
+                <img className="admin_products_image" src={produtc.image} alt="imagem do produto"></img>
                 <div>
                   <h2>{produtc.title}</h2>
                   <p>{produtc.description}</p>
                   <div className="admin_products_info">
-                    {categories.filter(category => category.id==produtc.category_id).map(category => (<p>Categoria: {category.name}</p>))} 
+                    {categories.filter(category => category.id===produtc.category_id).map(category => (<p>Categoria: {category.name}</p>))} 
                     <p>Min-jogadores: {produtc.minimumPlayersNumber}</p>
                     <p>Max-jogadores: {produtc.maximumPlayersNumber}</p>
                     <p>Idade: {produtc.minimumAge}+</p>
