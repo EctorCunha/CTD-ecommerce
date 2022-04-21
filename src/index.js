@@ -4,11 +4,11 @@ import App from './App';
 import './Components/Load';
 
 
-setTimeout(()=>{ 
+//setTimeout(()=>{ 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
-}, 3500);
+//}, 3500);
