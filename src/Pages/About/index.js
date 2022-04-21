@@ -7,6 +7,7 @@ import pedro from "../../Assets/About/pedro.jpg";
 import logo_github from "../../Assets/About/git.png";
 import logo_linkedin from "../../Assets/About/linkedin.png";
 
+
 export default function About() {
   return (
     <main className="page">
