@@ -1,7 +1,7 @@
 export default async function getProductById(id, setProduct) {
 
     try {
-        const product = await fetch(" http://18.189.31.114:8080/products/" + id)
+        const product = await fetch("http://localhost:8080/products/" + id)
             .then((response) => response.json());
         setProduct(product);
     } catch (error) {
