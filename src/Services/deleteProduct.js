@@ -1,6 +1,6 @@
 export default async function deleteProduct(id,getProducts,setProducts,clearStates) {
     try {
-      await fetch("http://gamenight-backend.herokuapp.com/products/" + id, {
+      await fetch("https://gamenight-backend.herokuapp.com/products/" + id, {
         method: "DELETE",
       });
       alert("Produto deletado com sucesso");

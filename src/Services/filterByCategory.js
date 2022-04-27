@@ -1,6 +1,6 @@
 export default async function filterByCategory(id,setProducts) {
     try {
-      const products = await fetch(" http://gamenight-backend.herokuapp.com/products/category/" + id)
+      const products = await fetch(" https://gamenight-backend.herokuapp.com/products/category/" + id)
         .then((response) => response.json());
       setProducts(products);
     } catch (error) {

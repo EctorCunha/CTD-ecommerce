@@ -1,7 +1,7 @@
 export default async function getProducts(setProducts) {
 
     try {
-      const products = await fetch('http://gamenight-backend.herokuapp.com/products')
+      const products = await fetch('https://gamenight-backend.herokuapp.com/products')
         .then((response) => response.json());
       setProducts(products.slice(0,10));
     } catch (error) {

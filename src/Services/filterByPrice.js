@@ -1,6 +1,6 @@
 export default async function filterByPrice(max_price,setProducts) {
     try {
-      const products = await fetch(" http://gamenight-backend.herokuapp.com/products/price/0.0/" + max_price)
+      const products = await fetch(" https://gamenight-backend.herokuapp.com/products/price/0.0/" + max_price)
         .then((response) => response.json());
       setProducts(products);
     } catch (error) {
