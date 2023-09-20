@@ -8,6 +8,12 @@ A CTD Commerce é uma empresa que atua neste segmento de mercado e desenvolve so
 
 Atentem-se para o briefing que o cliente da CTD Commerce passou para o desenvolvimento deste protótipo.
 
+![image](https://github.com/EctorCunha/CTD-ecommerce/assets/85139415/8bbc5a7e-f3b4-40b1-bd6d-ee1ee5bcd968)
+
+![image](https://github.com/EctorCunha/CTD-ecommerce/assets/85139415/deba8864-de44-4ab2-b59c-a16ebec4644e)
+
+
+
 ## 🌎 Requisitos gerais
 - O trabalho será desenvolvido em grupos de 4 ou 5 pessoas (Requisito indispensável);
 - Tanto o front quanto o back deverão constar em um (ou dois) repositórios (Github);
