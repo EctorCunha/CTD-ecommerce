@@ -1,4 +1,4 @@
-# CTD Ecommerce - Projeto Integrador (3º bimestre)
+# CTD Ecommerce
 
 Durante os últimos dois anos, especialmente em virtude do isolamento social, as pessoas modificaram seus hábitos de consumo.
 
